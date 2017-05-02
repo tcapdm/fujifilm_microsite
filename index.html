@@ -112,9 +112,9 @@
 		<div class="nav-wrapper">
 			<div class="col s12">
 				<div class="container">
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">First</a>
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">Second</a>
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">Third</a>
+					<a href="#!" class="grey-text text-darken-4 breadcrumb">Home</a>
+					<a href="#!" class="grey-text text-darken-4 breadcrumb">Products</a>
+					<a href="#!" class="grey-text text-darken-4 breadcrumb">XT-10</a>
 				</div>
 			</div>
 		</div>
@@ -147,7 +147,7 @@
 	</div>
 	<ul>	
 		<li class="scrollspy"  id="build">
-			<div class="col s12">
+			<div id="sectionFrontBackView" class="col s12">
 				<div class="per-section">
 					<div class="container" id="staggered-test">
 						<div class="row">
@@ -155,12 +155,10 @@
 							<h5 class="sub-page-title-black">FRONT AND BACK VIEW</h5>
 							<div class="col s12 m1">
 
-								<ul class="table-of-contents menu-container">
-									<li class="menu-fixed">
-										<a href="#build" ><i class="fa fa-camera-retro fa-2x"></i><br>BUILD</a>
-									</li>
+								<ul id="tblOfContents" class="table-of-contents menu-container">
+									<li class="menu-fixed"><a href="#build" ><i class="fa fa-camera-retro fa-2x"></i><br>BUILD</a></li>
 									<li class="menu-fixed"><a href="#camera-2" ><i class="fa fa-paint-brush fa-2x"></i><br>COLOR</a></li>
-							<li class="menu-fixed"><a href="#features"><i class="fa fa-bar-chart fa-2x"></i><br>FEATURES</a></li>
+									<li class="menu-fixed"><a href="#features"><i class="fa fa-bar-chart fa-2x"></i><br>FEATURES</a></li>
 									<li class="menu-fixed"><a href="#specs"><i class="fa fa-cog fa-2x"></i><br>SPECS</a></li>
 									<li class="menu-fixed"><a href="#gallery"><i class="fa fa-picture-o fa-2x"></i><br>GALLERY</a></li>
 								</ul>
@@ -193,6 +191,10 @@
 		</li>
 		<li class="scrollspy" id="camera-2" >
 			<div class="section red lighten-2" style="height:500px">
+				<div class="row container">
+					<div class="row">
+					</div>
+				</div>
 			</div>
 		</li>
 		<li  class="scrollspy" id="features" >
@@ -317,7 +319,7 @@
 					</div>
 				</div>
 				<div id="test2" class="col s12">
-					<div class="section" style="background-image:url(images/seigaiha.png); height:100%">
+					<div class="section height" style="background-image:url(images/seigaiha.png); ">
 						<div class="row container">
 							<div class="row">
 								<h5 style="margin-top:50px" class="sub-page-title-black"><b>AUTO MODE</b></h5>
@@ -796,6 +798,16 @@
 			//				ctx.imageSmoothingEnabled = false;
 			//				
 			//				ctx.drawImage(image, 0, 0, 2887, 1921, 0, 0, canvas.width, canvas.height);
+			
+			var top = $("#sectionFrontBackView").offset().top;
+			$(window).scroll(function(){
+				if($(window).scrollTop() >= top){
+					$("#tblOfContents").addClass("fixedContent");
+				}
+				else{
+					$("#tblOfContents").removeClass("fixedContent");
+				}
+			});
 
 		});	
 	</script>

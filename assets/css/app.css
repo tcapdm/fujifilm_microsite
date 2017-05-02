@@ -1895,13 +1895,21 @@ h3{
 }
 
 .table-of-contents{
-
-
+/*
 	position: fixed;
-	top: 30%;
-	left: 10%;
+	top: 29%;
+	left: 15%;
+	z-index: 1;
+*/
+}
+
+.fixedContent{
+	position: fixed;
+	top: 29%;
+	left: 15.5%;
 	z-index: 1;
 }
+
 .table-of-contents a{
 	padding-left:0;
 	font-size: 12px;
@@ -1909,4 +1917,18 @@ h3{
 
 .menu-container{
 	box-shadow: 1px 1px 10px #ccc;
+}
+
+.height{
+	height:100%;
+}
+
+@media (max-width: 400px) {
+	#tblOfContents{
+		display: none;
+	}
+	
+	.height{
+		height:auto;	
+	}
 }
