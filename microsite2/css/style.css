@@ -5,7 +5,7 @@
 	margin-left: 10%;
 	
 }
-@media screen and (max-width: 300px){
+@media screen and (max-width: 400px){
 	.container {
 		margin-right: 2%;
 		margin-left: 2%;
@@ -17,6 +17,19 @@
 	}
 
 }
+
+@media screen and (max-width: 900px){
+	.container {
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+	.product-list{
+		background-color: white;
+		padding-left: 0px;
+
+	}
+}
+
 
 
 
@@ -45,6 +58,9 @@
 .tabs::-moz-scrollbar {
 	display: none;
 }
+.tabs::-moz-appearance: scrollbartrack-vertical{
+	display: none;
+}
 
 .tabs .tab a:hover, .tabs .tab a.active {
 	background-color: transparent;
@@ -65,7 +81,7 @@
 .product-list{
 	background-color: white;
 /*	min-height: 600px;*/
-	padding-left: 8%;
+/*	padding-left: 8%;*/
 	padding-top: 4%;
 	
 }
