@@ -60,6 +60,14 @@
 }
 .tabs::-moz-appearance: scrollbartrack-vertical{
 	display: none;
+<<<<<<< HEAD
+=======
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+	background-color: transparent;
+	color: #bdbdbd;
+>>>>>>> 94195e1a64b80d302dea823186f5a10742422f81
 }
 
 

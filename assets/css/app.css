@@ -1830,6 +1830,7 @@ h3{
 		
 }
 
+<<<<<<< HEAD
 .table-of-contents {
 	height: 60px;
 	width: 70px;
@@ -1858,6 +1859,8 @@ h3{
 	padding-left: 10px;
 	border-left: 0 solid transparent;
 }
+=======
+>>>>>>> 94195e1a64b80d302dea823186f5a10742422f81
 
 #left{
 	border-left: solid 1px #fff;
