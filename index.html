@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection">
 		<link rel="stylesheet" href="assets/css/app.css">
-
+		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/vendor/image-comparison-slider/css/style.css"> <!-- Resource style -->
 		<script src="assets/vendor/image-comparison-slider/js/modernizr.js"></script> <!-- Modernizr -->
 		<link rel="stylesheet" href="assets/css/icons/style.css">
@@ -94,13 +94,13 @@
 				</div>
 			</div>
 		</div>
-	
+		</div>
 	<div class="banner">
 
 		<div class="cover">
-			<div class="row">
+			<div class="row" id="title">
 				<div class="col s3 header-tag">
-					<h3 >CREATIVITY.<br>EVERYDAY.</h3>
+					<p class="header-title">CREATIVITY.<br>EVERYDAY.</p>
 					<p class="header-sub">X-T10</p>
 
 				</div>
@@ -108,17 +108,25 @@
 		</div>
 
 	</div>
-	<nav class="grey lighten-2">
-		<div class="nav-wrapper">
-			<div class="col s12">
-				<div class="container">
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">Home</a>
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">Products</a>
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">XT-10</a>
-				</div>
-			</div>
+	
+	
+	<div class="col s12" id="breadcrumbs-container">
+		<div class="container">
+			<ul class="breadcrumbs breadcrumbs--with-here">
+				<li class="breadcrumbs__item breadcrumbs__item--first ">
+					<a href="/"><i class="fa fa-home grey-text"></i> HOME</a>
+				</li>
+				<li class="breadcrumbs__item breadcrumbs__item--penultimate grey-text">
+					<a href="/level-1"><i class="fa fa-inbox grey-text"></i> PRODUCTS</a>
+				</li>
+				<li class="breadcrumbs__item breadcrumbs__item--last breadcrumbs__item--here active-bc" >
+					<i class="fa fa-camera-retro"></i> XT-10
+				</li>
+			</ul>
+
 		</div>
-	</nav>
+	</div>
+	
 	<div class="section white">
 		<div class="row container">
 			<div class="row">
@@ -148,21 +156,14 @@
 	
 
 	<div class="fixed-action-btn hide-on-large-only floating" style="bottom: 45px; right: 24px; left:20px;">
-		<a id="btnFloat" class="btn-floating btn-large grey pulse">
+		<a class="btn-floating btn-large grey pulse">
 			<i class="fa fa-camera-retro"></i>
 		</a>
-		<ul class="abanico" id="fan">
-			<li><a href="">BUILD</a></li>
-			<li><a href="">COLOR</a></li>
-			<li><a href="">FEATURES</a></li>
-			<li><a href="">SPECS</a></li>
-			<li><a href="">GALLERY</a></li>
-			<li><a href="javascript:void();">MENU</a></li>
-		</ul>
+		
 	
 	</div>
 	
-	<ul>	
+	<ul style="margin:0;">	
 		<li class="scrollspy"  id="build">
 			<div id="sectionFrontBackView" class="col s12">
 				<div class="per-section">
@@ -207,11 +208,13 @@
 			</div>
 		</li>
 		<li class="scrollspy" id="camera-2" >
-			<div class="section red lighten-2" style="height:500px">
-				<div class="row container">
-					<div class="row">
-					</div>
-				</div>
+			<div class="section red lighten-2">
+				<img id="img" src="images/wew1.jpg" style="display:none"/>
+				<img id="image2" src="images/wew2.jpg" style="display:none" />
+				<img id="image3" src="images/wew3.jpg" style="display:none"/>
+				<img id="image4" src="images/wew4.jpg" style="display:none"/>
+				<canvas id="myCanvas" width="1594" height="900">
+				</canvas>
 			</div>
 		</li>
 		<li  class="scrollspy" id="features" >
@@ -243,7 +246,7 @@
 							</a>
 						</li>	
 						<li id="tabAuto" class="tab col s3">
-							<a href="#test4" class="active">
+							<a href="#test4">
 								<p class="grey-text text-darken-1">
 									<i class="icon-autofocus fa-3x "></i><br>AUTO FOCUS
 								</p>
@@ -251,7 +254,7 @@
 							</a>
 						</li>	
 						<li class="tab col s3">
-							<a href="#test5" >
+							<a href="#test5" class="active">
 								<p class="grey-text text-darken-1">
 									<i class="icon-camera_macro fa-3x "></i><br>AUTO MACRO
 								</p>
@@ -458,49 +461,37 @@
 										<div class="row">
 											<div class="col s12 m4">
 												<img src="images/pic4.jpg"/>
-											</div>
-											<div class="col s12 m4">
-												<img src="images/pic5.jpg"/>
-											</div>
-											<div class="col s12 m4">
-												<img src="images/pic6.jpg"/>
-											</div>
-										</div>
-										<br>
-										<div class="row">
-											<div class="col s12 m3">
 												<h6><b>AF-S + SINGLE POINT</b></h6>
 												<p>This feature delivers highly accurate autofocus on a specific area.</p>
 											</div>
-											<div class="col s12 m3">
+											<div class="col s12 m4">
+												<img src="images/pic5.jpg"/>
 												<h6><b>AF-S + ZONE</b></h6>
 												<p>Effectively focus on a subject with moderate movements,which the Single Area mode may have difficulty capturing.</p>
 											</div>
-											<div class="col s12 m3">
+											<div class="col s12 m4">
+												<img src="images/pic6.jpg"/>
 												<h6><b>AF-S + WIDE/TRACKING</b></h6>
 												<p>The camera automatically selects and focuses using several of the 77-point focus areas,
 													which is suited to subjects with unpredictable movements or multiple moving subjects</p>
 											</div>
 										</div>
+										<br>
+									
 										<div class="row">
 											<div class="col s12 m4">
 												<img src="images/pic7.jpg">
-											</div>
-											<div class="col s12 m4">
-												<img src="images/pic8.jpg">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col s12 m3">
 												<h6><b>A more accurate performance</b></h6>
 												<p>The single-point AF divides the focus area into smaller sections to determine the distance 
 													to the subject for greater focusing accuracy.</p>
 											</div>
-											<div class="col s12 m3">
+											<div class="col s12 m4">
+												<img src="images/pic8.jpg"><br><br>
 												<h6><b>Eye Detection AF produces more beautiful portraits</b></h6>
 												<p>Automatically detect human faces with Face Detection and ensure accurate focus on human eyes with Eye Detection AF.</p>
 											</div>
 										</div>
+										
 									</div>
 								</div>
 							</div>
@@ -622,33 +613,41 @@
 				<div class="row container">
 					<h5 style="margin-top:50px" class="sub-page-title-black"><b>SPECIFICATIONS</b></h5>
 					<div class="row">
-						<div class="col s12 m1">
-						</div>
-						<div class="col s12 m11">
-							<div class="row">
-								<div class="col s12 m5">
-									<img class="responsive-img" src="images/specificationsPic1.jpg" height="350px"/>
-									<br>
-									<img class="responsive-img" src="images/specificationsPic2.jpg"  height="350px"/>
+						<div class="col s12 m2"></div>
+						<div class="col s12 m10">
+							<div class="row" id="specs-content">
+								<div class="col s12 m4" >
+									<p>
+										<img class="responsive-img materialboxed" src="images/designPic.jpg" height="350px"/>
+									</p>
+									
+									<p>
+										<img class="responsive-img materialboxed" src="images/specificationsPic2.jpg "height="350px"/>
+									</p>
+									
+									
 								</div>
-								<div class="col s12 m3">
+								<div class="col s12 m4" >
 									<h6><b>MODEL NAME</b></h6>
-									<p>FUJIFILM X-T10</p>
-
+									<p class="specs">FUJIFILM X-T10</p>
+									<br>
 									<h6><b>NUMBER OF EFFECTIVE PIXELS</b></h6>
-									<p>1.63 million pixels</p>
-
+									<p class="specs">1.63 million pixels</p>
+									<br>
 									<h6><b>IMAGE SENSOR</b></h6>
-									<p>23.6mm x 15.6mm (APS-C) X-Trans CMOS II with primary color filter.<br><br>
-										Total number of pixels: 16.7 million pixels<br>
-										Sensor Cleaning system<br>
-										Ultra Sonic Vibration</p>
+									<p class="specs">23.6mm x 15.6mm (APS-C) X-Trans CMOS II with primary color filter.
+									Total number of pixels: 16.7 million pixels
+									<br>Sensor Cleaning system
+									<br>Ultra Sonic Vibration</p>
+										
+									<br>
 
 									<h6><b>STORAGE MEDIA</b></h6>
-									<p>SD memory card / SDHC memory card / SDXC(UHS-I) memory card*1</p>
-
+									<p class="specs">SD memory card / SDHC memory card / SDXC(UHS-I) memory card*1</p>
+									<br>
 									<h6><b>FILE FORMAT</b></h6>
-									<p >
+									<p class="specs">
+									
 										Still image<br>
 										<span style="margin-left:30px">- JPEG (Exif Ver 2.3)*2 RAW </span><br>
 										<span style="margin-left:30px">(RAF format), RAW+</span><br>
@@ -658,46 +657,64 @@
 										<span style="margin-left:30px">- Movie Video</span><br><span style="margin-left:35px"> Compression:H.264</span><br>
 										<span style="margin-left:30px">- Audio:Linear PCM Stereo</span>
 									</p>
+									<br>
 
 
 									<h6><b>NUMBER OF RECORDED PIXELS</b></h6>
-									<p>L:(3:2) 4896 x 3264 / (16:9) 4896 x 2760 / (1:1) 3264 x 3264 <br>
+									<p class="specs">L:(3:2) 4896 x 3264 / (16:9) 4896 x 2760 / (1:1) 3264 x 3264 <br>
 										M:(3:2) 3456 x 2304 / (16:9) 3456 x 1944 / (1:1) 2304 x 2304<br>
 										S:(3:2) 2496 x 1664 / (16:9) 2496 x 1408 / (1:1) 1664 x 1664<br>
 										(Motion Panorama)<br>
 										L:Vertical: 2160 x 9600 / Horizontal: 9600 x 1440<br>
 										M:Vertical: 2160 x 6400 / Horizontal: 6400 x 1440</p>	
-
-									<a class="black waves-effect waves-light btn">view speicfication</a>
+									<br>
+									<div class="col s12 m12">
+										<a class="black waves-effect waves-light btn">view speicfication</a>
+										
+									</div>
+									
 								</div>
-								<div class="col s12 m3">
+								<div class="col s12 m4">
 									<h6><b>LENS MOUNT</b></h6>
-									<p>FUJIFILM X mount</p>
+									<p class="specs">FUJIFILM X mount</p>
 
 									<h6><b>SENSITIVITY</b></h6>
 									<p>AUTO(Control available up to ISO 6400)<br>
 										Equivalent to ISO-6400(Standard Output Sensitivity)<br>
 										Extended output sensitivity: Equivalent ISO 100, 12800, 25600 and 51200
 									</p>
+									<br>
 
 									<h6><b>EXPOSURE MODE</b></h6>
-									<p>Programmed AE / Shutter Speed priority AE / Aperture priority AE / Manual exposure</p>
+									<p class="specs">Programmed AE / Shutter Speed priority AE / Aperture priority AE / Manual exposure</p>
+									
+									<br>
 
 									<h6><b>EXPOSURE COMPENSATION</b></h6>
-									<p>-3.0EV - +3.0EV, 1/3EV step(movie recording:-2.0EV - +2.0EV)</p>
+									<p class="specs">-3.0EV - +3.0EV, 1/3EV step(movie recording:-2.0EV - +2.0EV)</p>
+									
+									<br>
 
 									<h6><b>IMAGE STABILIZER</b></h6>
-									<p>Supported with OIS type lenses</p>
+									<p class="specs">Supported with OIS type lenses</p>
+									
+									<br>
 
 									<h6><b>FACE DETECTION</b></h6>
-									<p>Yes</p>
+									<p class="specs">Yes</p>
+									
+									<br>
 
 									<h6><b>SHUTTER TYPE</b></h6>
-									<p>Focal Plane Shutter</p>
+									<p class="specs">Focal Plane Shutter</p>
+									
+									<br>
 
 									<h6><b>SHUTTER SPEED</b></h6>
-									<p>(Electronic Shutter Mode) 1sec. to 1/32000sec.*3 <br>
+									<p class="specs">(Electronic Shutter Mode) 1sec. to 1/32000sec.*3 <br>
 										(P mode) 4sec. to 1/4000sec., Time 30Sec. to 1/4000sec., Bulb(max.60min), Synchronized shutter speed for flash:1/180sec. or slower</p>
+										
+									<br>
 								</div>
 							</div>
 						</div>
@@ -710,112 +727,174 @@
 				<div class="row container">
 					<h5 style="margin-top:50px" class="sub-page-title-white"><b>GALLERY</b></h5>
 					<div class="row">
-						<div class="col s12 m1">
+						<div class="col s12 m2"></div>
+							<div class="col s12 m10">
+
+
+								<div class="col s12 m4" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Yukio Uchida" >
+										<span class="bottomRight"><b>&copy; Yukio Uchida</b></span>
+									</div>
+								</div>
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Ben Cherry" >
+										<span class="bottomRight"><b>&copy; Ben Cherry</b></span>
+									</div>
+								</div>
+								<div class="col s12 m2" id="galleryPic">
+									<div style="background-color:white;"  id="gallery-container">
+										<img class=" materialboxed" src="images/img6.jpg" height="170" data-caption="Jara Sijka" >
+									</div>
+								</div>
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi" >
+										<span class="bottomRight"><b>&copy; Jara Sijka</b></span>
+									</div>
+								</div>
+
+
+
+								<div class="col s12 m2" id="galleryPic">
+									<div style="background-color:white; height:170px" id="gallery-container">
+										<img class="zoom materialboxed" src="images/img6.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Riley Joseph</b></span>
+									</div>
+								</div>
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Inagaki Norifumi</b></span>
+									</div>
+								</div>
+								<div class="col s12 m4" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Jack Ley</b></span>	
+									</div>
+								</div>
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Kurosaki Ichigo</b></span>
+									</div>
+								</div>
+
+								<div class="col s12 m4" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Takasu Ryuuji</b></span>
+									</div>
+								</div>
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Aisaka Taiga</b></span>
+									</div>
+								</div>
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Kirigaya Kirito</b></span>
+									</div>
+								</div>
+								<div class="col s12 m2" id="galleryPic">
+									<div style="background-color:white;" id="gallery-container">
+										<img class="materialboxed" src="images/img6.jpg" height="170" data-caption="Inagaki Norifumi">
+									</div>
+								</div>
+
+
+						
+							
 						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Yukio Uchida" >
-								<span class="bottomRight"><b>&copy; Yukio Uchida</b></span>
-							</div>
+					
+						
+					
+				</div>
+			</div>
+			
+			
+			
+		</li>
+	</ul>
+	<div class="footer">
+		<div class="footer-kuba">
+			<img src="images/kuba_black.gif" alt="kuba">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="footer-links">
+						<div class="footer-links-text">
+							<ul class="footer-links-text-list">
+								<li>
+									<a href="">Service Center</a>
+								</li>
+								<li>
+									<a href="">Global Site</a>
+								</li>
+								<li>
+									<a href="">Contact Us</a>
+								</li>
+							</ul>
 						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Ben Cherry" >
-								<span class="bottomRight"><b>&copy; Ben Cherry</b></span>
-							</div>
-						</div>
-						<div class="col s12 m2" id="galleryPic">
-							<div style="background-color:white;" >
-								<img class=" materialboxed" src="images/img6.jpg" height="170" data-caption="Jara Sijka" >
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi" >
-								<span class="bottomRight"><b>&copy; Jara Sijka</b></span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m1">
-						</div>
-						<div class="col s12 m2" id="galleryPic">
-							<div style="background-color:white; height:170px">
-								<img class="zoom materialboxed" src="images/img6.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Riley Joseph</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Inagaki Norifumi</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Jack Ley</b></span>	
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Kurosaki Ichigo</b></span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m1">
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Takasu Ryuuji</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Aisaka Taiga</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Kirigaya Kirito</b></span>
-							</div>
-						</div>
-						<div class="col s12 m2" id="galleryPic">
-							<div style="background-color:white;">
-								<img class="materialboxed" src="images/img6.jpg" height="170" data-caption="Inagaki Norifumi">	
-							</div>
+						<div class="footer-links-icon">
+							<ul class="footer-links-icon-list">
+								<li>
+									<a href="">
+										<i class="fa fa-facebook">
+											<span class="hide">hidden</span>
+										</i>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fa fa-instagram">
+											<span class="hide">hidden</span>
+										</i>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
+				<div class="col s12 m12">
+					<div class="footer-subscribe">
+
+						<div class="footer-subscribe-form">
+							<form action="">
+								<span class="footer-subscribe-text">Subscribe</span>
+								<div class="footer-subscribe-input">
+									<input type="text" class="footer-subscribe-email" placeholder="YOUR EMAIL">
+									<span class="footer-subscribe-icon">▸</span>
+								</div>
+								<input class="footer-subscribe-submit" type="submit">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m12">
+					<div class="footer-copyright">
+						<p>© Copyright 2017 FUJIFILM. All rights reserved.</p>
+					</div>
+				</div>
 			</div>
-		</li>
-	</ul>
+		</div>
+	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 	<script src="assets/vendor/image-comparison-slider/js/main.js"></script>
+	
 	<script type="text/javascript">
 		$(document).ready(function(){
+			moveColorSection();
 			$('.carousel').carousel();
 			$('.scrollspy').scrollSpy();
-
-			//				var canvas = document.getElementById('myCanvas');
-			//				var ctx = canvas.getContext('2d');
-			//				var image = document.getElementById('img');
-			//				
-			//				ctx.mozImageSmoothingEnabled = false;
-			//				ctx.webkitImageSmoothingEnabled = false;
-			//				ctx.msImageSmoothingEnabled = false;
-			//				ctx.imageSmoothingEnabled = false;
-			//				
-			//				ctx.drawImage(image, 0, 0, 2887, 1921, 0, 0, canvas.width, canvas.height);
-			
 			var top = $("#sectionFrontBackView").offset().top;
 			$(window).scroll(function(){
 				if($(window).scrollTop() >= top){
@@ -825,12 +904,140 @@
 					$("#tblOfContents").removeClass("fixedContent");
 				}
 			});
-			
-			$("#btnFloat").click(function(){
-//				$("#fan").attr("class","opacity:1");
-			});
 
 		});	
+		
+		function moveColorSection(){
+
+			var canvas = document.getElementById('myCanvas');
+			var ctx = canvas.getContext('2d');
+			ctx.mozImageSmoothingEnabled = true;
+			ctx.webkitImageSmoothingEnabled = true;
+			ctx.msImageSmoothingEnabled = true;
+			ctx.imageSmoothingEnabled = true;
+			var image = document.getElementById('img');
+			ctx.drawImage(image, 0, 0, 721, 1921, 0, 0, 398, canvas.height);
+
+			var image2 = document.getElementById('image2');
+			ctx.drawImage(image2, 721,0, 721, 1921, 398,0, 398, canvas.height);
+
+			var image3 = document.getElementById('image3')
+			ctx.drawImage(image3, 1442,0, 721, 1921, 796,0, 398, canvas.height);
+
+			var image4 = document.getElementById('image4');
+			ctx.drawImage(image4, 2163,0, 721, 1921, 1194,0, 398, canvas.height);
+
+			var image1Sx = 0;
+			var image2Sx = 721;
+			var image3Sx = 1442;
+			var image4Sx = 2163;
+
+			var image1Dx = 0;
+			var image2Dx = 398;
+			var image3Dx = 796;
+			var image4Dx = 1194;
+
+			var s1 = 0;
+			var s2 = 0;
+			var s3 = 0;
+			var s4 = 721;
+
+			var d1 =0;
+			var d2 =0;
+			var d3 =0;
+			var d4 =398;
+
+			canvas.addEventListener('mousemove', function(evt) {
+				var mousePos = getMousePos(canvas, evt);
+				var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+
+				if(mousePos.x >= ($(window).width()/2)){
+					console.log("MOVE LEFT");
+					image1Sx-=5.43;
+					image2Sx-=5.43;
+					image3Sx-=5.43;
+					image4Sx-=5.43;
+
+					image1Dx-=3;
+					image2Dx-=3;
+					image3Dx-=3;
+					image4Dx-=3;
+
+
+					if(image1Sx < 0 && image1Dx < 0 ){
+						image1Sx = 2887;
+						image1Dx = 1594;
+					}
+					else if(image2Sx < 0 && image2Dx < 0 ){
+						image2Sx = 2887;
+						image2Dx = 1594;
+					}
+					else if(image3Sx < 0 && image3Dx < 0 ){
+						image3Sx = 2887;
+						image3Dx = 1594;
+					}
+					else if(image4Sx < 0 && image4Dx < 0 ){
+						image4Sx = 2887;
+						image4Dx = 1594;
+					}
+
+					ctx.drawImage(image, image1Sx, 0, 721, 1921, image1Dx, 0, 398, canvas.height);
+					ctx.drawImage(image2, image2Sx,0, 721, 1921, image2Dx,0, 398, canvas.height);
+					ctx.drawImage(image3, image3Sx,0, 721, 1921, image3Dx,0, 398, canvas.height);
+					ctx.drawImage(image4, image4Sx,0, 721, 1921, image4Dx,0, 398, canvas.height);
+				}
+				else if(mousePos.x <=  ($(window).width()/2)){ 
+
+					image1Sx+=5.43;
+					image2Sx+=5.43;
+					image3Sx+=5.43;
+					image4Sx+=5.43;
+
+					image1Dx+=3;
+					image2Dx+=3;
+					image3Dx+=3;
+					image4Dx+=3;
+
+
+					if(image1Sx > (2887-721) && image1Dx > (1594-398) ){
+						image1Sx = 721 - image1Sx;
+						image1Dx = 398 -image1Dx;
+						console.log(image1Dx);
+					}
+					else if(image2Sx > (2887-721) && image2Dx > (1594-398) ){
+						image2Sx =  721- image2Sx;
+						image2Dx =  398 - image2Dx;
+						console.log(image2Dx);
+					}
+					else if(image3Sx > (2887-721) && image3Dx > (1594-398) ){
+						image3Sx =  721- image3Sx;
+						image3Dx =  398 - image3Dx;
+
+						console.log(image3Dx);
+					}
+					else if(image4Sx > (2887-721) && image4Dx > (1594-398) ){
+						image4Sx =  721 - image4Sx;
+						image4Dx =  398 - image4Dx;
+
+						console.log(image4Dx);
+					}
+
+					ctx.drawImage(image, image1Sx, 0, 721, 1921, image1Dx, 0, 398, canvas.height);
+					ctx.drawImage(image2, image2Sx,0, 721, 1921, image2Dx,0, 398, canvas.height);
+					ctx.drawImage(image3, image3Sx,0, 721, 1921, image3Dx,0, 398, canvas.height);
+					ctx.drawImage(image4, image4Sx,0, 721, 1921, image4Dx,0, 398, canvas.height);
+				}
+
+			}, false);
+		}
+
+		function getMousePos(canvas, evt) {
+			var rect = canvas.getBoundingClientRect();
+			return {
+				x: evt.clientX - rect.left,
+				y: evt.clientY - rect.top
+			};
+		}
 	</script>
 	</body>
 </html>
