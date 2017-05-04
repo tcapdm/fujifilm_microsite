@@ -60,14 +60,6 @@
 }
 .tabs::-moz-appearance: scrollbartrack-vertical{
 	display: none;
-<<<<<<< HEAD
-=======
-}
-
-.tabs .tab a:hover, .tabs .tab a.active {
-	background-color: transparent;
-	color: #bdbdbd;
->>>>>>> 94195e1a64b80d302dea823186f5a10742422f81
 }
 
 
@@ -88,14 +80,32 @@
 .vr{
 	border-left: 1px solid #757575;
 }
-
+.row {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+}
 .product-list{
-	background-color: white;
+/*	background-color: white;*/
 /*	min-height: 600px;*/
 /*	padding-left: 8%;*/
 	padding-top: 4%;
 	
 }
+
+.fuji:nth-child(even) {
+	background: #eceff1;
+}
+
+.fuji:nth-child(odd) {
+	background: white;
+}
+
+/*
+div.content > div:nth-of-type(odd){
+	background-color: #eceff1;
+}
+*/
 .product-img{
 	width: 250px;
 	display: block;

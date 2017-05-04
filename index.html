@@ -94,7 +94,7 @@
 				</div>
 			</div>
 		</div>
-		</div>
+	
 	<div class="banner">
 
 		<div class="cover">
@@ -148,10 +148,17 @@
 	
 
 	<div class="fixed-action-btn hide-on-large-only floating" style="bottom: 45px; right: 24px; left:20px;">
-		<a class="btn-floating btn-large grey pulse">
+		<a id="btnFloat" class="btn-floating btn-large grey pulse">
 			<i class="fa fa-camera-retro"></i>
 		</a>
-		
+		<ul class="abanico" id="fan">
+			<li><a href="">BUILD</a></li>
+			<li><a href="">COLOR</a></li>
+			<li><a href="">FEATURES</a></li>
+			<li><a href="">SPECS</a></li>
+			<li><a href="">GALLERY</a></li>
+			<li><a href="javascript:void();">MENU</a></li>
+		</ul>
 	
 	</div>
 	
@@ -236,7 +243,7 @@
 							</a>
 						</li>	
 						<li id="tabAuto" class="tab col s3">
-							<a href="#test4">
+							<a href="#test4" class="active">
 								<p class="grey-text text-darken-1">
 									<i class="icon-autofocus fa-3x "></i><br>AUTO FOCUS
 								</p>
@@ -244,7 +251,7 @@
 							</a>
 						</li>	
 						<li class="tab col s3">
-							<a href="#test5" class="active">
+							<a href="#test5" >
 								<p class="grey-text text-darken-1">
 									<i class="icon-camera_macro fa-3x "></i><br>AUTO MACRO
 								</p>
@@ -817,6 +824,10 @@
 				else{
 					$("#tblOfContents").removeClass("fixedContent");
 				}
+			});
+			
+			$("#btnFloat").click(function(){
+//				$("#fan").attr("class","opacity:1");
 			});
 
 		});	

@@ -1956,3 +1956,107 @@ h3{
 		height:auto;	
 	}
 }
+
+
+
+/*FANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN*/
+ul.abanico {
+	position: absolute;
+	left: 116px;
+	bottom: 0;
+	width: 400px;
+	bottom: 50px;
+	/*	height: 20px;*/
+	/*	margin: 40px auto;*/
+	list-style: none;
+	font: normal 16px "arial narrow", sans-serif;
+	vertical-align: bottom;
+	-ms-transform: rotate(270deg); /* IE 9 */
+	-webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+	transform: rotate(270deg);
+	background: aqua;
+}
+
+ul.abanico li {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 50px;
+	height: 300px;
+	background: #9e9e9e;
+	margin-left: -50px;
+	line-height: 300px;
+	text-align: center;
+	-moz-transform-origin: top center;
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+	border-radius: 25px;
+}
+
+ul.abanico li a {
+	display: inline-block;
+	width: 10px;
+	height: 50px;
+	text-decoration: none;
+	color: white;
+	padding-right: 70px;
+	padding-top: 20px;
+	line-height: 20px;
+	vertical-align: bottom;
+	-ms-transform: rotate(90deg); 
+	-webkit-transform: rotate(90deg); 
+	transform: rotate(90deg);
+
+}
+
+ul.abanico:hover li {
+	opacity: 1;
+}
+
+ul.abanico:hover li:nth-of-type(6) {
+	opacity: 0;
+}
+
+ul.abanico:hover li:nth-of-type(1) {
+	background: #bdbdbd;
+	-moz-transform: rotate(-40deg);
+	-webkit-transform: rotate(-40deg);
+	transform: rotate(-40deg);
+	border: 1px solid #eeeeee;
+}
+
+ul.abanico:hover li:nth-of-type(2) {
+	background: #bdbdbd;
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+	border: 1px solid #eeeeee;
+}
+
+ul.abanico:hover li:nth-of-type(3) {
+	background: #bdbdbd;
+	-moz-transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+	border: 1px solid #eeeeee;
+}
+
+ul.abanico:hover li:nth-of-type(4) {
+	background: #bdbdbd;
+	-moz-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+	border: 1px solid #eeeeee;
+}
+
+ul.abanico:hover li:nth-of-type(5) {
+	background: #bdbdbd;
+	-moz-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	border: 1px solid #eeeeee;
+}
+
