@@ -13,10 +13,10 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection">
 		<link rel="stylesheet" href="assets/css/app.css">
-
-		<link rel="stylesheet" href="assets/vendor/image-comparison-slider/css/style.css"> <!-- Resource style -->
-		<script src="assets/vendor/image-comparison-slider/js/modernizr.js"></script> <!-- Modernizr -->
+		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/css/icons/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.3.4/css/lightcase.css">
+
 	</head>
 
 	<body>
@@ -68,7 +68,8 @@
 				</div>
 			</div>
 		</div>
-
+		
+		
 		<div class="header-bottom clearfix">
 			<div class="container">
 				<div class="row">
@@ -95,12 +96,14 @@
 			</div>
 		</div>
 		</div>
+		
+
 	<div class="banner">
 
 		<div class="cover">
-			<div class="row">
+			<div class="row" id="title">
 				<div class="col s3 header-tag">
-					<h3 >CREATIVITY.<br>EVERYDAY.</h3>
+					<p class="header-title">CREATIVITY.<br>EVERYDAY.</p>
 					<p class="header-sub">X-T10</p>
 
 				</div>
@@ -108,17 +111,27 @@
 		</div>
 
 	</div>
-	<nav class="grey lighten-2">
-		<div class="nav-wrapper">
-			<div class="col s12">
-				<div class="container">
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">Home</a>
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">Products</a>
-					<a href="#!" class="grey-text text-darken-4 breadcrumb">XT-10</a>
-				</div>
-			</div>
+
+	
+	
+
+	<div class="col s12" id="breadcrumbs-container">
+		<div class="container">
+			<ul class="breadcrumbs breadcrumbs--with-here">
+				<li class="breadcrumbs__item breadcrumbs__item--first ">
+					<a href="/"><i class="fa fa-home grey-text"></i> HOME</a>
+				</li>
+				<li class="breadcrumbs__item breadcrumbs__item--penultimate grey-text">
+					<a href="/level-1"><i class="fa fa-inbox grey-text"></i> PRODUCTS</a>
+				</li>
+				<li class="breadcrumbs__item breadcrumbs__item--last breadcrumbs__item--here active-bc" >
+					<i class="fa fa-camera-retro"></i> XT-10
+				</li>
+			</ul>
+
 		</div>
-	</nav>
+	</div>
+
 	<div class="section white">
 		<div class="row container">
 			<div class="row">
@@ -145,17 +158,11 @@
 			<a class="carousel-item" href="#five!"><img src="images/img9.jpg"></a>
 		</div>
 	</div>
+
+
 	
 
-	<div class="fixed-action-btn hide-on-large-only floating" style="bottom: 45px; right: 24px; left:20px;">
-		<a class="btn-floating btn-large grey pulse">
-			<i class="fa fa-camera-retro"></i>
-		</a>
-		
-	
-	</div>
-	
-	<ul>	
+	<ul style="margin:0;">	
 		<li class="scrollspy"  id="build">
 			<div id="sectionFrontBackView" class="col s12">
 				<div class="per-section">
@@ -174,25 +181,41 @@
 								</ul>
 
 							</div>
+							
+							<!--		FLOATING NAV-->
+		
+							<div class="fixed-action-btn hide-on-large-only " style="bottom: 15px; right: 20px;" id="btn-menu">
+								<a class="btn-floating btn-large  teal pulse">
+									<i class="material-icons">menu</i>
+								</a>
+								<ul>
+									<li><a  href="#build" class="btn-floating  teal" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-camera-retro fa-3x"></i></a></li>
+									<li><a href="#camera-2" class="btn-floating  teal" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-paint-brush fa-3x"></i></a></li>
+									<li><a href="#features" class="btn-floating teal" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-bar-chart fa-3x"></i></a></li>
+									<li><a href="#specs" class="btn-floating teal" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-cog fa-3x"></i></a></li>
+									<li><a href="#gallery"class="btn-floating teal" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-picture-o fa-3x"></i></a></li>
+								</ul>
+							</div>
+							
+
+							
 							<div class="col s12 m10">
-								<figure class="cd-image-container">
-
-									<img src="images/front_back_camerra/Fujifilm-X-T10-mirrorless-camera-back.jpg" alt="Fuji_Film_Front_Camera">
-									<span class="cd-image-label" data-type="original">Original</span>
-
-									<div class="cd-resize-img"> <!-- the resizable image on top -->
-
-
-										<img src="images/front_back_camerra/Fujifilm-X-T10-mirrorless-camera.jpg" alt="Fuji_Film_Back_Camera">
-
-										<span class="cd-image-label" data-type="modified">Modified</span>
+							
+								<div class="ba-slider">
+									<img src="images/front_back_camerra/Fujifilm-X-T10-mirrorless-camera-back.jpg" alt="">       
+									<div class="resize">
+									
+										<img src="images/front_back_camerra/Fujifilm-X-T10-mirrorless-camera.jpg" alt="">
 									</div>
-									<span class="cd-handle"></span>
+									<span class="handle">
+										
+									</span>
+									
+								</div>
 
-								</figure>
 
 							</div>
-	
+
 
 						</div>
 					</div>
@@ -200,11 +223,13 @@
 			</div>
 		</li>
 		<li class="scrollspy" id="camera-2" >
-			<div class="section red lighten-2" style="height:500px">
-				<div class="row container">
-					<div class="row">
-					</div>
-				</div>
+			<div class="section red lighten-2">
+				<img id="img" src="" style="display:none"/>
+				<img id="image2" src="" style="display:none" />
+				<img id="image3" src="" style="display:none"/>
+				<img id="image4" src="" style="display:none"/>
+				<canvas id="myCanvas" width="1594" height="900">
+				</canvas>
 			</div>
 		</li>
 		<li  class="scrollspy" id="features" >
@@ -451,49 +476,37 @@
 										<div class="row">
 											<div class="col s12 m4">
 												<img src="images/pic4.jpg"/>
-											</div>
-											<div class="col s12 m4">
-												<img src="images/pic5.jpg"/>
-											</div>
-											<div class="col s12 m4">
-												<img src="images/pic6.jpg"/>
-											</div>
-										</div>
-										<br>
-										<div class="row">
-											<div class="col s12 m3">
 												<h6><b>AF-S + SINGLE POINT</b></h6>
 												<p>This feature delivers highly accurate autofocus on a specific area.</p>
 											</div>
-											<div class="col s12 m3">
+											<div class="col s12 m4">
+												<img src="images/pic5.jpg"/>
 												<h6><b>AF-S + ZONE</b></h6>
 												<p>Effectively focus on a subject with moderate movements,which the Single Area mode may have difficulty capturing.</p>
 											</div>
-											<div class="col s12 m3">
+											<div class="col s12 m4">
+												<img src="images/pic6.jpg"/>
 												<h6><b>AF-S + WIDE/TRACKING</b></h6>
 												<p>The camera automatically selects and focuses using several of the 77-point focus areas,
 													which is suited to subjects with unpredictable movements or multiple moving subjects</p>
 											</div>
 										</div>
+										<br>
+
 										<div class="row">
 											<div class="col s12 m4">
 												<img src="images/pic7.jpg">
-											</div>
-											<div class="col s12 m4">
-												<img src="images/pic8.jpg">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col s12 m3">
 												<h6><b>A more accurate performance</b></h6>
 												<p>The single-point AF divides the focus area into smaller sections to determine the distance 
 													to the subject for greater focusing accuracy.</p>
 											</div>
-											<div class="col s12 m3">
+											<div class="col s12 m4">
+												<img src="images/pic8.jpg"><br><br>
 												<h6><b>Eye Detection AF produces more beautiful portraits</b></h6>
 												<p>Automatically detect human faces with Face Detection and ensure accurate focus on human eyes with Eye Detection AF.</p>
 											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -615,33 +628,41 @@
 				<div class="row container">
 					<h5 style="margin-top:50px" class="sub-page-title-black"><b>SPECIFICATIONS</b></h5>
 					<div class="row">
-						<div class="col s12 m1">
-						</div>
-						<div class="col s12 m11">
-							<div class="row">
-								<div class="col s12 m5">
-									<img class="responsive-img" src="images/specificationsPic1.jpg" height="350px"/>
-									<br>
-									<img class="responsive-img" src="images/specificationsPic2.jpg"  height="350px"/>
+						<div class="col s12 m2"></div>
+						<div class="col s12 m10">
+							<div class="row" id="specs-content">
+								<div class="col s12 m4" >
+									<p>
+										<img class="responsive-img materialboxed" src="images/designPic.jpg" height="350px"/>
+									</p>
+
+									<p>
+										<img class="responsive-img materialboxed" src="images/specificationsPic2.jpg "height="350px"/>
+									</p>
+
+
 								</div>
-								<div class="col s12 m3">
+								<div class="col s12 m4" >
 									<h6><b>MODEL NAME</b></h6>
-									<p>FUJIFILM X-T10</p>
-
+									<p class="specs">FUJIFILM X-T10</p>
+									<br>
 									<h6><b>NUMBER OF EFFECTIVE PIXELS</b></h6>
-									<p>1.63 million pixels</p>
-
+									<p class="specs">1.63 million pixels</p>
+									<br>
 									<h6><b>IMAGE SENSOR</b></h6>
-									<p>23.6mm x 15.6mm (APS-C) X-Trans CMOS II with primary color filter.<br><br>
-										Total number of pixels: 16.7 million pixels<br>
-										Sensor Cleaning system<br>
-										Ultra Sonic Vibration</p>
+									<p class="specs">23.6mm x 15.6mm (APS-C) X-Trans CMOS II with primary color filter.
+										Total number of pixels: 16.7 million pixels
+										<br>Sensor Cleaning system
+										<br>Ultra Sonic Vibration</p>
+
+									<br>
 
 									<h6><b>STORAGE MEDIA</b></h6>
-									<p>SD memory card / SDHC memory card / SDXC(UHS-I) memory card*1</p>
-
+									<p class="specs">SD memory card / SDHC memory card / SDXC(UHS-I) memory card*1</p>
+									<br>
 									<h6><b>FILE FORMAT</b></h6>
-									<p >
+									<p class="specs">
+
 										Still image<br>
 										<span style="margin-left:30px">- JPEG (Exif Ver 2.3)*2 RAW </span><br>
 										<span style="margin-left:30px">(RAF format), RAW+</span><br>
@@ -651,46 +672,64 @@
 										<span style="margin-left:30px">- Movie Video</span><br><span style="margin-left:35px"> Compression:H.264</span><br>
 										<span style="margin-left:30px">- Audio:Linear PCM Stereo</span>
 									</p>
+									<br>
 
 
 									<h6><b>NUMBER OF RECORDED PIXELS</b></h6>
-									<p>L:(3:2) 4896 x 3264 / (16:9) 4896 x 2760 / (1:1) 3264 x 3264 <br>
+									<p class="specs">L:(3:2) 4896 x 3264 / (16:9) 4896 x 2760 / (1:1) 3264 x 3264 <br>
 										M:(3:2) 3456 x 2304 / (16:9) 3456 x 1944 / (1:1) 2304 x 2304<br>
 										S:(3:2) 2496 x 1664 / (16:9) 2496 x 1408 / (1:1) 1664 x 1664<br>
 										(Motion Panorama)<br>
 										L:Vertical: 2160 x 9600 / Horizontal: 9600 x 1440<br>
 										M:Vertical: 2160 x 6400 / Horizontal: 6400 x 1440</p>	
+									<br>
+									<div class="col s12 m12">
+										<a class="black waves-effect waves-light btn">view speicfication</a>
 
-									<a class="black waves-effect waves-light btn">view speicfication</a>
+									</div>
+
 								</div>
-								<div class="col s12 m3">
+								<div class="col s12 m4">
 									<h6><b>LENS MOUNT</b></h6>
-									<p>FUJIFILM X mount</p>
+									<p class="specs">FUJIFILM X mount</p>
 
 									<h6><b>SENSITIVITY</b></h6>
 									<p>AUTO(Control available up to ISO 6400)<br>
 										Equivalent to ISO-6400(Standard Output Sensitivity)<br>
 										Extended output sensitivity: Equivalent ISO 100, 12800, 25600 and 51200
 									</p>
+									<br>
 
 									<h6><b>EXPOSURE MODE</b></h6>
-									<p>Programmed AE / Shutter Speed priority AE / Aperture priority AE / Manual exposure</p>
+									<p class="specs">Programmed AE / Shutter Speed priority AE / Aperture priority AE / Manual exposure</p>
+
+									<br>
 
 									<h6><b>EXPOSURE COMPENSATION</b></h6>
-									<p>-3.0EV - +3.0EV, 1/3EV step(movie recording:-2.0EV - +2.0EV)</p>
+									<p class="specs">-3.0EV - +3.0EV, 1/3EV step(movie recording:-2.0EV - +2.0EV)</p>
+
+									<br>
 
 									<h6><b>IMAGE STABILIZER</b></h6>
-									<p>Supported with OIS type lenses</p>
+									<p class="specs">Supported with OIS type lenses</p>
+
+									<br>
 
 									<h6><b>FACE DETECTION</b></h6>
-									<p>Yes</p>
+									<p class="specs">Yes</p>
+
+									<br>
 
 									<h6><b>SHUTTER TYPE</b></h6>
-									<p>Focal Plane Shutter</p>
+									<p class="specs">Focal Plane Shutter</p>
+
+									<br>
 
 									<h6><b>SHUTTER SPEED</b></h6>
-									<p>(Electronic Shutter Mode) 1sec. to 1/32000sec.*3 <br>
+									<p class="specs">(Electronic Shutter Mode) 1sec. to 1/32000sec.*3 <br>
 										(P mode) 4sec. to 1/4000sec., Time 30Sec. to 1/4000sec., Bulb(max.60min), Synchronized shutter speed for flash:1/180sec. or slower</p>
+
+									<br>
 								</div>
 							</div>
 						</div>
@@ -703,123 +742,430 @@
 				<div class="row container">
 					<h5 style="margin-top:50px" class="sub-page-title-white"><b>GALLERY</b></h5>
 					<div class="row">
-						<div class="col s12 m1">
+						<div class="col s12 m2"></div>
+						<div class="col s12 m10">
+							<a href="images/gallery/cat.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m4" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+
+										<img class="zoom" src="images/gallery/cat.jpg" height="150" data-caption="Yukio Uchida" >
+										<span class="bottomRight"><b>&copy; Yukio Uchida</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/coffee-bean.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom " src="images/gallery/coffee-bean.jpg" height="150" data-caption="Ben Cherry" >
+										<span class="bottomRight"><b>&copy; Ben Cherry</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/collared-lizard.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m2" id="galleryPic">
+									<div style="background-color:white;"  id="gallery-container">
+										<img class="zoom " src="images/gallery/collared-lizard.jpg" height="170" data-caption="Jara Sijka" >
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/father-and-son.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom " src="images/gallery/father-and-son.jpg" height="150" data-caption="Inagaki Norifumi" >
+										<span class="bottomRight"><b>&copy; Jara Sijka</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/floor.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m2" id="galleryPic">
+									<div style="background-color:white; height:170px" id="gallery-container">
+										<img class="zoom " src="images/gallery/floor.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Riley</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/red-fox.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom " src="images/gallery/red-fox.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Inagaki Norifumi</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/spin.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m4" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom " src="images/gallery/spin.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Jack Ley</b></span>	
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/spring.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom " src="images/gallery/spring.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Kurosaki Ichigo</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/wild-goose.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m4" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom " src="images/gallery/wild-goose.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Takasu Ryuuji</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/tree3.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom " src="images/gallery/tree3.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Aisaka Taiga</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/tree2.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m3" id="galleryPic">
+									<div style="background-color:white; height:170" id="gallery-container">
+										<img class="zoom " src="images/gallery/tree2.jpg" height="150" data-caption="Inagaki Norifumi">
+										<span class="bottomRight"><b>&copy; Kirigaya Kirito</b></span>
+									</div>
+								</div>
+							</a>
+							<a href="images/gallery/tree1.jpg" data-rel="lightcase:myCollection" title="Your title">
+								<div class="col s12 m2" id="galleryPic">
+									<div style="background-color:white;" id="gallery-container">
+										<img class="zoom" src="images/gallery/tree1.jpg" height="170" data-caption="Inagaki Norifumi">
+
+									</div>
+								</div>
+
+							</a>
+
 						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Yukio Uchida" >
-								<span class="bottomRight"><b>&copy; Yukio Uchida</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Ben Cherry" >
-								<span class="bottomRight"><b>&copy; Ben Cherry</b></span>
-							</div>
-						</div>
-						<div class="col s12 m2" id="galleryPic">
-							<div style="background-color:white;" >
-								<img class=" materialboxed" src="images/img6.jpg" height="170" data-caption="Jara Sijka" >
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi" >
-								<span class="bottomRight"><b>&copy; Jara Sijka</b></span>
-							</div>
-						</div>
+
+
+
 					</div>
-					<div class="row">
-						<div class="col s12 m1">
+				</div>
+				<div class="col s12">
+					<br>
+					<br>
+					<br>
+
+				</div>
+				</li>
+	</ul>
+	
+	<div class="footer">
+		<div class="footer-kuba">
+			<img src="images/kuba_black.gif" alt="kuba">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="footer-links">
+						<div class="footer-links-text">
+							<ul class="footer-links-text-list">
+								<li>
+									<a href="">Service Center</a>
+								</li>
+								<li>
+									<a href="">Global Site</a>
+								</li>
+								<li>
+									<a href="">Contact Us</a>
+								</li>
+							</ul>
 						</div>
-						<div class="col s12 m2" id="galleryPic">
-							<div style="background-color:white; height:170px">
-								<img class="zoom materialboxed" src="images/img6.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Riley Joseph</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Inagaki Norifumi</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Jack Ley</b></span>	
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Kurosaki Ichigo</b></span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m1">
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew1.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Takasu Ryuuji</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew2.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Aisaka Taiga</b></span>
-							</div>
-						</div>
-						<div class="col s12 m3" id="galleryPic">
-							<div style="background-color:white; height:170">
-								<img class="zoom materialboxed" src="images/wew3.jpg" height="150" data-caption="Inagaki Norifumi">
-								<span class="bottomRight"><b>&copy; Kirigaya Kirito</b></span>
-							</div>
-						</div>
-						<div class="col s12 m2" id="galleryPic">
-							<div style="background-color:white;">
-								<img class="materialboxed" src="images/img6.jpg" height="170" data-caption="Inagaki Norifumi">	
-							</div>
+						<div class="footer-links-icon">
+							<ul class="footer-links-icon-list">
+								<li>
+									<a href="">
+										<i class="fa fa-facebook">
+											<span class="hide">hidden</span>
+										</i>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fa fa-instagram">
+											<span class="hide">hidden</span>
+										</i>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
+				<div class="col s12 m12">
+					<div class="footer-subscribe">
+
+						<div class="footer-subscribe-form">
+							<form action="">
+								<span class="footer-subscribe-text">Subscribe</span>
+								<div class="footer-subscribe-input">
+									<input type="text" class="footer-subscribe-email" placeholder="YOUR EMAIL">
+									<span class="footer-subscribe-icon">▸</span>
+								</div>
+								<input class="footer-subscribe-submit" type="submit">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m12">
+					<div class="footer-copyright">
+						<p>© Copyright 2017 FUJIFILM. All rights reserved.</p>
+					</div>
+				</div>
 			</div>
-		</li>
-	</ul>
+		</div>
+	</div>
+
+
+
+
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-	<script src="assets/vendor/image-comparison-slider/js/main.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.3.4/js/lightcase.min.js"></script><script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('a[data-rel^=lightcase]').lightcase({
+				
+				onClose : {
+					qux: function() {
+						
+					}
+				},
+			});
+		});
+	</script>
+	
 	<script type="text/javascript">
+		
+		
 		$(document).ready(function(){
+			
 			$('.carousel').carousel();
 			$('.scrollspy').scrollSpy();
-
-			//				var canvas = document.getElementById('myCanvas');
-			//				var ctx = canvas.getContext('2d');
-			//				var image = document.getElementById('img');
-			//				
-			//				ctx.mozImageSmoothingEnabled = false;
-			//				ctx.webkitImageSmoothingEnabled = false;
-			//				ctx.msImageSmoothingEnabled = false;
-			//				ctx.imageSmoothingEnabled = false;
-			//				
-			//				ctx.drawImage(image, 0, 0, 2887, 1921, 0, 0, canvas.width, canvas.height);
-			
 			var top = $("#sectionFrontBackView").offset().top;
 			$(window).scroll(function(){
 				if($(window).scrollTop() >= top){
 					$("#tblOfContents").addClass("fixedContent");
+					$("#btn-menu").slideDown();
 				}
 				else{
 					$("#tblOfContents").removeClass("fixedContent");
+					$("#btn-menu").slideUp();
 				}
 			});
-
+			loadingImage();
 		});	
+
+		function loadingImage(){
+			var image = new Array(4);
+			var imgCtr=0;
+			for(c1 = 0; c1< image.length; c1++){
+				image[c1] = new Image();
+				image[c1].src = "images/wew"+(c1+1)+".jpg";
+				console.log(image[c1]);
+			}
+
+			for(c1 = 0; c1< image.length; c1++){
+				image[c1].onload = function(){
+					imgCtr++;
+					if(imgCtr == image.length){
+						console.log("pumasok dito");
+						moveColorSection(image);
+					}
+				};
+			}
+		}
+
+		function moveColorSection(arrayImage){
+			var canvas = document.getElementById('myCanvas');
+			var ctx = canvas.getContext('2d');
+			ctx.mozImageSmoothingEnabled = true;
+			ctx.webkitImageSmoothingEnabled = true;
+			ctx.msImageSmoothingEnabled = true;
+			ctx.imageSmoothingEnabled = true;		
+
+			var imageTotalWidth = arrayImage[0].width / arrayImage.length;
+			var imageTotalSpace = imageTotalWidth;
+
+			var imageWidth = 0
+			var imageSpace = imageTotalWidth;
+
+			var canvasTotalWidth =  canvas.width / arrayImage.length;
+			var CanvasTotalSpace = canvasTotalWidth;
+
+			var canvasWidth = 0;
+			var canvasSpace = canvasTotalWidth;
+
+			var imgSx = new Array();
+			var imgDx = new Array();
+
+			for(c1 =0; c1<arrayImage.length; c1++){
+				if(c1 ==0){
+					imgSx[c1] = imageWidth;
+					imgDx[c1] = canvasWidth;
+					ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);
+					imgSx[c1] = imageWidth;
+					imgDx[c1] = canvasWidth;
+				}
+				else{
+					imageWidth+=imageTotalWidth;
+					canvasWidth+=canvasTotalWidth;
+					imgSx[c1] = imageWidth;
+					imgDx[c1] = canvasWidth;
+					ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
+				}
+			}
+			canvas.addEventListener('mousemove', function waw(evt) {
+				var mousePos = getMousePos(canvas, evt);
+				var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+				console.log(message);
+
+				if(mousePos.x >= ($(window).width()/2)){
+					console.log("MOVE LEFT");
+					for(c1 = 0 ; c1<arrayImage.length ; c1++){
+						imgSx[c1]-=5.43;
+						imgDx[c1]-=3;	
+						if(imgSx[c1] < 0 && imgDx[c1] < 0){
+							imgSx[c1] = arrayImage[c1].width;
+							imgDx[c1] = canvas.width;
+						}
+					}
+					for(c1 =0; c1<arrayImage.length; c1++){
+						if(c1 ==0){
+							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);
+						}
+						else{
+
+							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
+						}
+					}
+				}
+				else if(mousePos.x <=  ($(window).width()/2)){ 	
+					for(c1 = 0 ; c1<arrayImage.length ; c1++){
+						imgSx[c1]+=5.43;
+						imgDx[c1]+=3;	
+						if(imgSx[c1] > arrayImage[c1].width && imgDx[c1] > canvas.width){
+							imgSx[c1] = 0;
+							imgDx[c1] = 0;
+						}
+					}
+					for(c1 =0; c1<arrayImage.length; c1++){
+						if(c1 ==0){
+							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);
+						}
+						else{
+							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
+						}
+					}
+				}
+			}, false);
+
+		}
+
+		function getMousePos(canvas, evt) {
+			var rect = canvas.getBoundingClientRect();
+			return {
+				x: evt.clientX - rect.left,
+				y: evt.clientY - rect.top
+			};
+		}
+//
+//
+		///		IMAGE COMPARISON
+		
+		
+		// Call & init
+		$(document).ready(function(){
+			$('.ba-slider').each(function(){
+				var cur = $(this);
+				// Adjust the slider
+				var width = cur.width()+'px';
+				cur.find('.resize img').css('width', width);
+				// Bind dragging events
+				drags(cur.find('.handle'), cur.find('.resize'), cur);
+			});
+		});
+
+		// Update sliders on resize. 
+		// Because we all do this: i.imgur.com/YkbaV.gif
+		$(window).resize(function(){
+			$('.ba-slider').each(function(){
+				var cur = $(this);
+				var width = cur.width()+'px';
+				cur.find('.resize img').css('width', width);
+			});
+		});
+
+		function drags(dragElement, resizeElement, container) {
+
+			// Initialize the dragging event on mousedown.
+			dragElement.on('mousedown touchstart', function(e) {
+
+				dragElement.addClass('draggable');
+				resizeElement.addClass('resizable');
+
+				// Check if it's a mouse or touch event and pass along the correct value
+				var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+				// Get the initial position
+				var dragWidth = dragElement.outerWidth(),
+					posX = dragElement.offset().left + dragWidth - startX,
+					containerOffset = container.offset().left,
+					containerWidth = container.outerWidth();
+
+				// Set limits
+				minLeft = containerOffset + 10;
+				maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+				// Calculate the dragging distance on mousemove.
+				dragElement.parents().on("mousemove touchmove", function(e) {
+
+					// Check if it's a mouse or touch event and pass along the correct value
+					var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+					leftValue = moveX + posX - dragWidth;
+
+					// Prevent going off limits
+					if ( leftValue < minLeft) {
+						leftValue = minLeft;
+					} else if (leftValue > maxLeft) {
+						leftValue = maxLeft;
+					}
+
+					// Translate the handle's left value to masked divs width.
+					widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+
+					// Set the new values for the slider and the handle. 
+					// Bind mouseup events to stop dragging.
+					$('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+						$(this).removeClass('draggable');
+						resizeElement.removeClass('resizable');
+					});
+					$('.resizable').css('width', widthValue);
+				}).on('mouseup touchend touchcancel', function(){
+					dragElement.removeClass('draggable');
+					resizeElement.removeClass('resizable');
+				});
+				e.preventDefault();
+			}).on('mouseup touchend touchcancel', function(e){
+				dragElement.removeClass('draggable');
+				resizeElement.removeClass('resizable');
+			});
+		}
+
+		
+		
+	
+
 	</script>
+
+
 	</body>
 </html>
