@@ -22,33 +22,45 @@ video {
 
 
 /*<<<<<<< HEAD*/
+/*
+.menu-indicator {
+	top: 8px;
+	position: absolute;
+	background: #00926e;
+	width: 8px;
+	height:50px;
+	left: 101%;
+	border-bottom-right-radius:100px;
+	border-top-right-radius:100px;
+	
+}
+*/
 
 .table-of-contents {
-	height: 375px;
-	width: 70px;
+	height: 325px;
+	width: 60px;
 }
 
 .table-of-contents a {
 	font-size: 12px;
-	padding-left: 10px;
+	padding-left: 0;
 	color: #c3c3c3;
 }
 
 .table-of-contents a.active {
-	text-align: center;
 	font-weight: 400;
 	padding-left: 0;
-	margin-top: 5px;
 	height: 60px;
-	width: 80px;
-	border-right: 10px solid #01916d;
+	width: 74px;
+	border-right: 10px solid #00926e;
 	border-left: 0 solid transparent;
 	border-radius: 10px;
 	color: #54504f;
+	
 }
 
 .table-of-contents a:hover {
-	padding-left: 10px;
+	padding-left: 0px;
 	border-left: 0 solid transparent;
 }
 
@@ -67,6 +79,12 @@ video {
 #gallery-container span {
 	color: #333;
 }
+#side-menu {
+	float:left; 
+	position:absolute;
+	top: 34.5%;
+}
+
 
 
 /*IMAGE COMPARISON*/
@@ -107,23 +125,27 @@ video {
 	/* Big orange knob  */
 	position: absolute;
 	top: 100%;
-	width: 60px;
-	height: 64px;
+	width: 34px;
+	height: 35px;
 	margin: -32px 0 0 -32px;
-	content: '\2039 \0020 \203A';
+	content: ' ';
 	color: white;
 	font-weight: bold;
 	font-size: 36px;
 	text-align: center;
-	line-height: 60px;
-	background: #00926e;
-	/* @blue green */
 	border-radius: 50%;
-	transition: all 0.3s ease;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, .3), inset 0 2px 0 rgba(255, 255, 255, .5), inset 0 60px 50px -30px #00926e;
-	/* lighten(@orange, 20%)*/
+	left: 18px;
+	
+	background: url(../../images/arrow.png);
+	background-color:#03926e ;
+	background-size:30px;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
+
+
+/*
 .draggable:after {
 	width: 48px;
 	height: 48px;
@@ -131,6 +153,7 @@ video {
 	line-height: 48px;
 	font-size: 30px;
 }
+*/
 
 
 /*FLOATING NAV*/

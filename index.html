@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/css/icons/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.3.4/css/lightcase.css">
+		<link rel="stylesheet" href="assets/vendor/lightcase-2.4.0/src/css/lightcase.css">
 
 	</head>
 
@@ -99,15 +99,20 @@
 		
 
 	<div class="banner">
-
+		
 		<div class="cover">
-			<div class="row" id="title">
-				<div class="col s3 header-tag">
-					<p class="header-title">CREATIVITY.<br>EVERYDAY.</p>
-					<p class="header-sub">X-T10</p>
+			<div class="container">
+				<div class="row" id="title" style="float:left;">
 
+					<div class="col s2 header-tag">
+						<p class="header-title">CREATIVITY.<br>EVERYDAY.</p>
+						<p class="header-sub">X-T10</p>
+
+					</div>
 				</div>
+				
 			</div>
+		
 		</div>
 
 	</div>
@@ -164,22 +169,25 @@
 
 	<ul style="margin:0;">	
 		<li class="scrollspy"  id="build">
-			<div id="sectionFrontBackView" class="col s12">
+			<div class="col s12">
 				<div class="per-section">
 					<div class="container" id="staggered-test">
 						<div class="row">
 
-							<h5 class="sub-page-title-black">FRONT AND BACK VIEW</h5>
-							<div class="col s12 m1 hide-on-med-and-down" id="side-menu">
-
+							
+							<div class="hide-on-med-and-down" id="side-menu">
+								
 								<ul id="tblOfContents" class="table-of-contents menu-container">
-									<li class="menu-fixed"><a href="#build" ><i class="fa fa-camera-retro fa-3x"></i><br>BUILD</a></li>
-									<li class="menu-fixed"><a href="#camera-2" ><i class="fa fa-paint-brush fa-3x"></i><br>COLOR</a></li>
-									<li class="menu-fixed"><a href="#features"><i class="fa fa-bar-chart fa-3x"></i><br>FEATURES</a></li>
-									<li class="menu-fixed"><a href="#specs"><i class="fa fa-cog fa-3x"></i><br>SPECS</a></li>
-									<li class="menu-fixed"><a href="#gallery"><i class="fa fa-picture-o fa-3x"></i><br>GALLERY</a></li>
+									
+									<li class="menu-fixed" style="text-align:center;">
+									<a href="#build" class="tab-menu-1">	<i class="fa fa-camera-retro fa-3x"></i><br>BUILD</a></li>
+									<li class="menu-fixed" style="text-align:center;"><a href="#camera-2"  class="tab-menu-2"><i class="fa fa-paint-brush fa-3x"></i><br>COLOR</a></li>
+									<li class="menu-fixed" style="text-align:center;"><a href="#features"  class="tab-menu-3"><i class="fa fa-bar-chart fa-3x"></i><br>FEATURES</a></li>
+									<li class="menu-fixed" style="text-align:center;"><a href="#specs"  class="tab-menu-4"><i class="fa fa-cog fa-3x"></i><br>SPECS</a></li>
+									<li class="menu-fixed" style="text-align:center;"><a href="#gallery"  class="tab-menu-5"><i class="fa fa-picture-o fa-3x"></i><br>GALLERY</a></li>
+									<li class="menu-indicator"></li>
 								</ul>
-
+								
 							</div>
 							
 							<!--		FLOATING NAV-->
@@ -198,18 +206,15 @@
 							</div>
 							
 
-							
-							<div class="col s12 m10">
-							
-								<div class="ba-slider">
-									<img src="images/front_back_camerra/Fujifilm-X-T10-mirrorless-camera-back.jpg" alt="">       
+							<div class="col s12 m2"></div>
+							<div class="col s12 m8" id="sectionFrontBackView" >
+								<h5 class="sub-page-title-black">FRONT AND BACK VIEW</h5>
+								<div class="ba-slider" >
+									<img src="images/front_back_camerra/Fujifilm-X-T10-mirrorless-camera-back.jpg" alt="">
 									<div class="resize">
-									
 										<img src="images/front_back_camerra/Fujifilm-X-T10-mirrorless-camera.jpg" alt="">
 									</div>
-									<span class="handle">
-										
-									</span>
+									<span class="handle"></span>
 									
 								</div>
 
@@ -223,12 +228,9 @@
 			</div>
 		</li>
 		<li class="scrollspy" id="camera-2" >
-			<div class="section red lighten-2">
-				<img id="img" src="" style="display:none"/>
-				<img id="image2" src="" style="display:none" />
-				<img id="image3" src="" style="display:none"/>
-				<img id="image4" src="" style="display:none"/>
-				<canvas id="myCanvas" width="1594" height="900">
+			<div>
+				<h5 class="sub-page-title-white colorTitle">COLOR</h5>
+				<canvas id="myCanvas" class="responsive img">
 				</canvas>
 			</div>
 		</li>
@@ -684,8 +686,12 @@
 										M:Vertical: 2160 x 6400 / Horizontal: 6400 x 1440</p>	
 									<br>
 									<div class="col s12 m12">
-										<a class="black waves-effect waves-light btn">view speicfication</a>
+										<a class="black waves-effect waves-light btn">view specification</a>
 
+									</div>
+									<div class="col s12 m12">
+										<br><br><br><br>
+										
 									</div>
 
 								</div>
@@ -743,7 +749,8 @@
 					<h5 style="margin-top:50px" class="sub-page-title-white"><b>GALLERY</b></h5>
 					<div class="row">
 						<div class="col s12 m2"></div>
-						<div class="col s12 m10">
+						<div class="col s12 m10" id="galleryContainer">
+						
 							<a href="images/gallery/cat.jpg" data-rel="lightcase:myCollection" title="Your title">
 								<div class="col s12 m4" id="galleryPic">
 									<div style="background-color:white; height:170" id="gallery-container">
@@ -929,17 +936,17 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.3.4/js/lightcase.min.js"></script><script type="text/javascript">
+	<script type="text/javascript" src="assets/vendor/lightcase-2.4.0/src/js/lightcase.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>s
+	<script type="text/javascript">
+	
 		jQuery(document).ready(function($) {
 			$('a[data-rel^=lightcase]').lightcase({
 				
-				onClose : {
-					qux: function() {
-						
-					}
-				},
 			});
 		});
+		
+
 	</script>
 	
 	<script type="text/javascript">
@@ -949,26 +956,32 @@
 			
 			$('.carousel').carousel();
 			$('.scrollspy').scrollSpy();
+			
 			var top = $("#sectionFrontBackView").offset().top;
+			var topGallery = $("#galleryContainer").offset().top;
 			$(window).scroll(function(){
 				if($(window).scrollTop() >= top){
 					$("#tblOfContents").addClass("fixedContent");
 					$("#btn-menu").slideDown();
 				}
+				
 				else{
 					$("#tblOfContents").removeClass("fixedContent");
 					$("#btn-menu").slideUp();
+					
 				}
 			});
 			loadingImage();
+			
 		});	
+		
 
 		function loadingImage(){
-			var image = new Array(4);
+			var image = new Array(3);
 			var imgCtr=0;
 			for(c1 = 0; c1< image.length; c1++){
 				image[c1] = new Image();
-				image[c1].src = "images/wew"+(c1+1)+".jpg";
+				image[c1].src = "images/color/cam"+(c1+1)+".jpg";
 				console.log(image[c1]);
 			}
 
@@ -991,6 +1004,13 @@
 			ctx.msImageSmoothingEnabled = true;
 			ctx.imageSmoothingEnabled = true;		
 
+			if($(window).width() <= 500){
+				canvas.height = 300;
+			}else{
+				canvas.height = arrayImage[0].height;
+			}
+
+			canvas.width = $(window).width();
 			var imageTotalWidth = arrayImage[0].width / arrayImage.length;
 			var imageTotalSpace = imageTotalWidth;
 
@@ -1007,69 +1027,167 @@
 			var imgDx = new Array();
 
 			for(c1 =0; c1<arrayImage.length; c1++){
+
 				if(c1 ==0){
+
 					imgSx[c1] = imageWidth;
 					imgDx[c1] = canvasWidth;
 					ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);
 					imgSx[c1] = imageWidth;
 					imgDx[c1] = canvasWidth;
+
 				}
 				else{
+
 					imageWidth+=imageTotalWidth;
 					canvasWidth+=canvasTotalWidth;
 					imgSx[c1] = imageWidth;
 					imgDx[c1] = canvasWidth;
 					ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
+
 				}
+
 			}
-			canvas.addEventListener('mousemove', function waw(evt) {
+
+			var click = canvas.addEventListener('click', function wew(evt) {
 				var mousePos = getMousePos(canvas, evt);
 				var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
-				console.log(message);
+				var pos = mousePos.x;
 
-				if(mousePos.x >= ($(window).width()/2)){
-					console.log("MOVE LEFT");
-					for(c1 = 0 ; c1<arrayImage.length ; c1++){
-						imgSx[c1]-=5.43;
-						imgDx[c1]-=3;	
-						if(imgSx[c1] < 0 && imgDx[c1] < 0){
-							imgSx[c1] = arrayImage[c1].width;
-							imgDx[c1] = canvas.width;
-						}
-					}
-					for(c1 =0; c1<arrayImage.length; c1++){
-						if(c1 ==0){
-							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);
-						}
-						else{
+				for(c1 =0; c1<arrayImage.length; c1++){
 
-							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
+					if(c1 == (arrayImage.length-1)){
+						if(pos > imgDx[c1] && pos < imgDx[0]){
+							var x = arrayImage[c1].width / arrayImage.length;
+							var y = canvas.width / arrayImage.length;
+							var max = arrayImage[c1].width;
+							var maxCanvas = canvas.width;
+							var img = arrayImage[c1];
+							clearInterval(intervalMove);
+							var interval = setInterval(function(){
+
+								if(canvas.width < 500){
+									ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, maxCanvas, canvas.height);
+									clearInterval(interval);
+									console.log("black");
+								}else{
+									if(x < max ){
+										x+=100;
+									}
+									else{
+										clearInterval(interval);
+									}
+									ctx.drawImage(img, 0, 0, x, img.height, 0, 0, x, canvas.height);
+								}
+
+
+							},10);
 						}
 					}
+					else{
+
+						if(pos > imgDx[c1] && pos < imgDx[c1+1]){
+							var x = arrayImage[c1].width / arrayImage.length;
+							var max = arrayImage[c1].width;
+							var img = arrayImage[c1];
+							clearInterval(intervalMove);
+							var interval = setInterval(function(){
+
+								if(canvas.width < 500){
+									ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, maxCanvas, canvas.height);
+									clearInterval(interval);
+									console.log("black");
+								}else{
+									if(x < max ){
+										x+=100;
+									}
+									else{
+										clearInterval(interval);
+									}
+									ctx.drawImage(img, 0, 0, x, img.height, 0, 0, x, canvas.height);
+								}
+							},10);
+
+
+						}
+					}
+
+
 				}
-				else if(mousePos.x <=  ($(window).width()/2)){ 	
-					for(c1 = 0 ; c1<arrayImage.length ; c1++){
-						imgSx[c1]+=5.43;
-						imgDx[c1]+=3;	
-						if(imgSx[c1] > arrayImage[c1].width && imgDx[c1] > canvas.width){
-							imgSx[c1] = 0;
-							imgDx[c1] = 0;
-						}
-					}
-					for(c1 =0; c1<arrayImage.length; c1++){
-						if(c1 ==0){
-							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);
-						}
-						else{
-							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
-						}
-					}
-				}
-			}, false);
+
+
+			},false);
+
+			var mouseOver = canvas.addEventListener('mouseover', function wew(evt) {
+				var mousePos = getMousePos(canvas, evt);
+				var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+				var pos = mousePos.x;
+				clearInterval(intervalMove);
+				moveCamera(pos, arrayImage, imgSx, imgDx, canvas, imageSpace, canvasSpace, ctx);
+
+			},false);
+
+			canvas.addEventListener('mouseout', function(evt){
+				clearInterval(intervalMove);
+			},false);
 
 		}
 
-		function getMousePos(canvas, evt) {
+		var intervalMove;
+		function moveCamera(pos, arrayImage, imgSx, imgDx, canvas, imageSpace, canvasSpace, ctx){
+
+			if(canvas.width < 500){
+
+			}
+			else{
+
+				if(pos >= ($(window).width()/2)){
+					intervalMove = setInterval(function(){
+						for(c1 = 0 ; c1<arrayImage.length ; c1++){
+
+							imgSx[c1]-=(arrayImage.length+3);
+							imgDx[c1]-=(arrayImage.length+3);	
+
+							if(imgSx[c1] < 0 && imgDx[c1] < 0){
+								imgSx[c1] = arrayImage[c1].width;
+								imgDx[c1] = canvas.width;
+							}
+						}
+
+						for(c1 =0; c1<arrayImage.length; c1++){
+							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
+						}
+					},10);
+
+
+					console.log("MOVE LEFT");
+
+				}
+				else if(pos <=  (($(window).width()/2)+30)){ 	
+					intervalMove = setInterval(function(){
+						for(c1 = 0 ; c1<arrayImage.length ; c1++){
+
+							imgSx[c1]+=(arrayImage.length+3);
+							imgDx[c1]+=(arrayImage.length+3);	
+
+							if(imgSx[c1] > arrayImage[c1].width && imgDx[c1] > canvas.width){
+								imgSx[c1] = 0;
+								imgDx[c1] = 0;
+							}
+						}
+
+						for(c1 =0; c1<arrayImage.length; c1++){
+							ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
+						}
+					},10)
+				}
+
+			}
+
+
+		}
+
+		function getMousePos(canvas,evt) {
 			var rect = canvas.getBoundingClientRect();
 			return {
 				x: evt.clientX - rect.left,
@@ -1166,6 +1284,10 @@
 
 	</script>
 
-
+	<script>
+		$("a").click(function(event) {
+			event.preventDefault(); 
+		});
+	</script>
 	</body>
 </html>
