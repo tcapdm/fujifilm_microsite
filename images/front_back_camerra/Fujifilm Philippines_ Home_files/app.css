@@ -1858,12 +1858,11 @@ h3{
 .menu-fixed {
 	background: #bdbdbd;
 	width: 53px;
-	height: 60px;
+	height: 50px;
 	border: solid 0 transparent;
 	background: rgb(255,255,255);
 	text-align:left;
 	border: solid 1px #e8e8e8;
-	
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMWQxZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(209,209,209,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(209,209,209,1)));
@@ -1931,7 +1930,7 @@ h3{
 
 /*BREAD CRUMBS*/
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 360px) {
 	.header {
 		background:rgba(255,255,255,0.1) ;
 	}
@@ -2143,57 +2142,26 @@ text-align: center;
 
 /*LIGHT BOX*/
 
-.whiteNew{
-	
-	position: fixed;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMDIiLz4KICAgIDxzdG9wIG9mZnNldD0iNDQlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuODMiLz4KICAgIDxzdG9wIG9mZnNldD0iNTMlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.02) 1%, rgba(255,255,255,0.83) 44%, rgba(255,255,255,1) 53%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0.02)), color-stop(44%,rgba(255,255,255,0.83)), color-stop(53%,rgba(255,255,255,1)));
-	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.02) 1%,rgba(255,255,255,0.83) 44%,rgba(255,255,255,1) 53%);
-	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.02) 1%,rgba(255,255,255,0.83) 44%,rgba(255,255,255,1) 53%);
-	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.02) 1%,rgba(255,255,255,0.83) 44%,rgba(255,255,255,1) 53%);
-	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.02) 1%,rgba(255,255,255,0.83) 44%,rgba(255,255,255,1) 53%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-	width: 100%;
-	height:100%;
-	z-index: 1	;
-	
-	-webkit-transition: background-color 2s ease-out;
-	-moz-transition: background-color 2s ease-out;
-	-o-transition: background-color 2s ease-out;
-	transition: background-color 2s ease-out;
-
+body{
+	background-color: white;
+	z-index:999;
 }
 
 
-
 @media (max-width: 768px) and (orientation: landscape) { 
-	
-	
 	.banner {
 		background-size:cover;
 		background-repeat:no-repeat;
 		height: 90vh;
 	}
 }
+/*
+@media only screen and (max-width: 412px) {
+	body{
 
-@media only screen and (max-width: 500px) {
-	.carousel{
-		overflow: hidden;
-		position: relative;
-		width: 90%;
-		height: 400px;
-		-webkit-perspective: 500px;
-		perspective: 500px;
-		-webkit-transform-style: preserve-3d;
-		transform-style: preserve-3d;
-		-webkit-transform-origin: 0% 50%;
-		transform-origin: 0% 50%;
-		margin-left: 5%;
-
+		display: none;
 	}
 }
-/*
 @media only screen and (max-width: 320px) {
 	body{
 
