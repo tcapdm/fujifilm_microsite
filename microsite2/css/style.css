@@ -1,15 +1,18 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
 	.container {
 		margin-right: 2%;
-		margin-left: 2%;
+		margin-left: 5% !important;
 	}
 	.product-list{
 		background-color: white;
 		padding-left: 0px;
 
 	}
-	/* Styles */
+	.breadcrumbs__item {
+		display: inline;
+		padding-right: 27px !important;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -89,7 +92,11 @@ iPad 3
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-	/* Styles */
+	.container {
+		margin-right: 5%;
+		margin-left: 5%;
+
+	}
 }
 
 /* Samsung Galaxy S3 ----------- */
@@ -116,30 +123,22 @@ iPad 3
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-	.container {
-		margin-right: 2%;
-		margin-left: 2%;
-	}
-	.product-list{
-		background-color: white;
-		padding-left: 0px;
-
-	}
+	
+	
 	/* Styles */
 }
 
 
-
-
+a:hover, a:focus {
+	box-shadow: 0 1px rgba(231, 76, 60, 0)!important;
+}
 .container {
 	margin-right: 5%;
 	margin-left: 10%;
 	
 }
 
-@media screen and (max-width: 900px){
-	
-}
+
 
 
 .banner {
@@ -155,6 +154,7 @@ iPad 3
 	height: inherit;
 	background: linear-gradient(to right, rgba(255, 255, 255, .97) 10%,rgba(228, 228, 228, 0.92) 50%,rgba(0, 0, 0, 0) 100%);
 }
+
 
 
 .m10{
@@ -218,7 +218,9 @@ iPad 3
 	color: #bdbdbd !important ;
 
 }
+.tab a:hover{
 
+}
 .tabs .tab a.active {
 	background: none !important;
 	color: #bdbdbd !important ;
@@ -229,15 +231,20 @@ iPad 3
 	position: absolute  ;
 	bottom: 0  ;
 	height: 3px  ;
-	background: #009966  ;
+	background: #009966;
+/*	top: 46px;*/
 	
 }
+
+
 
 .tab a.active {
 	
 }
 
-
+.txt-line{
+	line-height: 1;
+}
 /*
 .grey-gradient{
 	
@@ -246,28 +253,60 @@ iPad 3
 }
 */
 
-
-
-.left-arrow{
-/*	z-index:900;*/
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-right: 10px;
-	float: left;
-	background: linear-gradient(to right, rgb(210, 210, 210) 10%,rgba(228, 228, 228, 0.92) 50%,rgba(66, 66, 66, 0.22) 100%);
+.wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
-.right-arrow{
-/*	margin-top: -10px;*/
-/*	z-index:900;*/
-	top:287px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-right: 10px;
-	float: right;
-	background: linear-gradient(to right, rgb(210, 210, 210) 10%,rgba(228, 228, 228, 0.92) 50%,rgba(66, 66, 66, 0.22) 100%);
+
+/*SCROLL TAB*/
+.left{
+	
+	padding: 15px;
+	background:linear-gradient(to right, rgb(144, 144, 144) 10%,rgba(167, 167, 167, 0.46) 50%,rgba(175, 175, 175, 0) 100%);
 	
 }
+
+.right {
+	float: right;
+	padding: 15px;
+	background:linear-gradient(to left, rgb(144, 144, 144) 10%,rgba(167, 167, 167, 0.46) 50%,rgba(175, 175, 175, 0) 100%);
+	
+/*	opacity: .2;*/
+
+	
+}
+
+.right,
+.left {
+/*	border: 2px solid red;*/
+	min-height: 50px;
+/*	min-width: 50px;*/
+	display: block;
+	visbility: visible;
+	-webkit-transition: visbility .3s ease-out;
+	transition: visbility .3s ease-out;
+	
+}
+@media (min-width: 1025px) {
+	.right,
+	.left {
+		visibility: hidden;
+	}
+}
+
+.img-s{
+height: 50px;
+	width: 20px;
+}
+
 .vr{
 	border-left: 1px solid #757575;
 }
@@ -381,7 +420,10 @@ img {
 
 
 .container-box{
-	margin: 0 5% 0 5%;
+	margin-top: 0;
+	margin-left: 7%;
+	margin-bottom: 0;
+	margin-right: 5%;
 }
 /*
 .bord{
@@ -390,6 +432,7 @@ img {
 */
 .img-accessories{
 	width: 200px;
+	height: 200px;
 	margin-top: 20%;
 	
 }
@@ -408,9 +451,11 @@ img {
 .img-tag{
 	float: right;
 	padding-top: 40px;
+	color: #cfd8dc;
 }
 
 .tab-accessories{
+	padding-top: 10px;
 	width: 100%;
 	min-height: 90px;
 	color: black;
@@ -420,6 +465,7 @@ img {
 	text-transform: uppercase;
 	word-wrap: normal;
 	word-break: keep-all;
+	border-bottom: 1px solid grey;
 }
 
 .tabs .tab-accessories a{
@@ -438,7 +484,14 @@ img {
 	background: none !important;
 	color: #009966 !important;
 }
+.tabs .tab-accessories .indicator {
+	position: absolute  ;
+	bottom: 0  ;
+	height: 3px  ;
+	background: white;
+/*	top: 46px;*/
 
+}
 .tab-size{
 	width: 14%;
 }
@@ -446,4 +499,25 @@ img {
 .center{
 	margin-left: 10%;
 	margin-right: 10%;
+}
+.txt{
+	display: block;
+	text-align: center;
+}
+@media (max-width: 601px) {
+	.txt{
+		visibility: hidden;
+	}
+	.tab-accessories {
+		
+		width: 100%;
+		min-height: 55px;
+		color: black;
+		font-size: 12px;
+		line-height: 12px;
+		margin: auto;
+		text-transform: uppercase;
+		word-wrap: normal;
+		word-break: keep-all;
+		border-bottom: 1px solid grey;
 }

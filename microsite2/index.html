@@ -115,11 +115,20 @@
 			
 		
 		<center>
-			<div class="col s12">
+			<div class="wrapper col s12">
+				
+				<div class="left">
 
-				<ul class="tabs grey darken-3">
+						<a class="" id="left-button">
+							<img src="img/left-arrow.png" class="responsive-img img-s"/>
+						</a>
+						
 					
-<!--					<i class="fa fa-chevron-left fa-2x white left-arrow" aria-hidden="true"></i>-->
+				</div>
+
+				<ul class="tabs grey darken-3" id="myTab">
+					
+
 					
 					<li class="tab grey darken-3 col s1 "><a  href="" class="filter_link active" data-filter="all">SEE ALL</a></li>
 					<li class="tab grey darken-3 txt col s3 vr"><a  href="" class="filter_link" data-filter="protector_filter"><span>PROTECTOR FILTER</span></a></li>
@@ -129,27 +138,24 @@
 					<li class="tab grey darken-3 col s1 vr"><a  href="" class="filter_link" data-filter="lens_cap">LENS CAP</a></li>
 					
 					
-<!--
-					<a class="btn-floating">
-						<i class="fa fa-chevron-right fa-2x white right-arrow" aria-hidden="true"></i>
-					</a>
--->
+
 					
 					
 
 				</ul>
+				<div class="right">
+				
+						<a class="" id="right-button">
+							<img src="img/right-arrow.png" class="responsive-img img-s" />
+						</a>
+
+				
+				</div>
 
 			</div>
 			
 		</center>
-		<div class="col s12">
-			<div class=" left-arrow">
-				<i class="fa fa-chevron-left fa-2x left-arrow" aria-hidden="true"></i>
-			</div>
-			<div class=" right-arrow">
-				<i class="fa fa-chevron-right fa-2x white right-arrow" aria-hidden="true"></i>
-			</div>
-		</div>
+		
 	</div>
 	<div class="content">		
 		<div class="fuji lens_cap">
@@ -710,7 +716,23 @@
 		
 			$('ul.tabs').tabs('select_tab', 'tab_id');
 			
-			$('.fuji:odd').css('background-color', '#eceff1')
+			$('.fuji:odd').css('background-color', '#eceff1');
+			
+			$('#right-button').click(function() {
+				event.preventDefault();
+				$('#myTab').animate({
+					scrollLeft: "+=320px"
+				}, "slow");
+			});
+
+			$('#left-button').click(function() {
+				event.preventDefault();
+				$('#myTab').animate({
+					scrollLeft: "-=320px"
+				}, "slow");
+			});
+
+			
 		});
 
 
