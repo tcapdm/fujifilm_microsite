@@ -171,6 +171,7 @@ a:hover, a:focus {
 	text-transform: uppercase;
 	margin: auto;
 	border-right: 0 !important;
+	visibility: visible !important;
 	
 }
 
@@ -195,8 +196,8 @@ a:hover, a:focus {
 	padding-right: 65px ;
 	font-size: 14px ;
 	font-weight: normal ;
-	text-overflow: ellipsis ;
-	overflow: hidden ;
+/*	text-overflow: ellipsis ;*/
+	overflow: visible;
 	transition: color .28s ease ;
 	padding-top: 0px;
 	font-family: 'Roboto Condensed', sans-serif ;
@@ -425,11 +426,7 @@ img {
 	margin-bottom: 0;
 	margin-right: 5%;
 }
-/*
-.bord{
-	border: .5px solid #e0e0e0 ;
-}
-*/
+
 .img-accessories{
 	width: 200px;
 	height: 200px;
@@ -466,6 +463,7 @@ img {
 	word-wrap: normal;
 	word-break: keep-all;
 	border-bottom: 1px solid grey;
+	visibility: visible;
 }
 
 .tabs .tab-accessories a{

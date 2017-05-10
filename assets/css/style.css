@@ -24,15 +24,15 @@ video {
 /*<<<<<<< HEAD*/
 /*
 .menu-indicator {
-	top: 8px;
-	position: absolute;
-	background: #00926e;
-	width: 8px;
-	height:50px;
-	left: 101%;
-	border-bottom-right-radius:100px;
-	border-top-right-radius:100px;
-	
+top: 8px;
+position: absolute;
+background: #00926e;
+width: 8px;
+height:50px;
+left: 101%;
+border-bottom-right-radius:100px;
+border-top-right-radius:100px;
+
 }
 */
 
@@ -56,7 +56,7 @@ video {
 	border-left: 0 solid transparent;
 	border-radius: 10px;
 	color: #54504f;
-	
+
 }
 
 .table-of-contents a:hover {
@@ -146,7 +146,7 @@ video {
 	text-align: center;
 	border-radius: 50%;
 	left: 17.6px;
-	
+
 	background: url(../../images/arrow.png);
 	background-color:#03926e ;
 	background-size:30px;

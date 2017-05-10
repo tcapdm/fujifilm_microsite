@@ -11,22 +11,25 @@ $(document).ready(function(){
 	while (i < images.length) {
 		
 	
-		$('#masonry-container').append('<div id="img'+(i+1)+'" class="grid-item grid-item--height2"><a href="'+images[i]+'" data-rel="lightcase:myCollection" title="Your title"><img class="zoom" src="'+images[i]+'"  height="85%"/><span class="bottomRight black-text"><b>&copy; Inagaki Norifumi</b></span></a></div>');
+		$('#masonry-container').append('<div id="img'+(i+1)+'" class="grid-item grid-item--height2"><a href="'+images[i]+'" data-rel="lightcase:myCollection" title="Your title"><img class="zoom" src="'+images[i]+'"  /><span class="bottomRight black-text"><b>&copy; Inagaki Norifumi</b></span></a></div>');
 		
 		i+=1;
 
 
 	}
 	var masonryCtr =0;
+	var ctrM=0;
 	$('.grid-item--height2').each(function() {
 		masonryCtr +=1;
-		var h = Math.floor(Math.random() * 100) + 200;
-		
+//		var h = Math.floor(Math.random() * 100) + 200;
+		var h = images[ctrM].height;
+		console.log(images[ctrM].height);
 		$(this).css("height", h);
 		
 		$('.grid').masonry({
 			itemSelector: '.grid-item'
 		});
+		ctrM+=1;
 	});
 
 
