@@ -1,8 +1,9 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 	.container {
-		margin-right: 2%;
-		margin-left: 5% !important;
+		margin-left: 2%;
+		margin-right: 0px;
+		padding: 0;
 	}
 	.product-list{
 		background-color: white;
@@ -132,11 +133,12 @@ iPad 3
 a:hover, a:focus {
 	box-shadow: 0 1px rgba(231, 76, 60, 0)!important;
 }
-.container {
-	margin-right: 5%;
-	margin-left: 10%;
-	
+
+.container-tab{
+	padding: 0 12.75rem !important;
 }
+
+	
 
 
 
@@ -192,8 +194,8 @@ a:hover, a:focus {
 	display: block ;
 	width: 100% ;
 	height: 100% ;
-	padding-left: 65px ;
-	padding-right: 65px ;
+	padding-left: 40px;
+	padding-right: 35px;
 	font-size: 14px ;
 	font-weight: normal ;
 /*	text-overflow: ellipsis ;*/
@@ -301,7 +303,33 @@ a:hover, a:focus {
 	.left {
 		visibility: hidden;
 	}
+	
+	
 }
+
+@media (max-width: 1000px) {
+	
+
+	
+	.container-tab{
+	padding: 0 !important;
+}
+	
+}
+
+@media (max-width: 600px) {
+
+.center {
+	margin:0 !important;
+	
+}
+.container-box {
+	padding: 0!important;
+}
+
+}
+
+
 
 .img-s{
 height: 50px;
@@ -421,15 +449,12 @@ img {
 
 
 .container-box{
-	margin-top: 0;
-	margin-left: 7%;
-	margin-bottom: 0;
-	margin-right: 5%;
+	padding: 0 5.75rem;
 }
 
 .img-accessories{
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	margin-top: 20%;
 	
 }
@@ -518,4 +543,11 @@ img {
 		word-wrap: normal;
 		word-break: keep-all;
 		border-bottom: 1px solid grey;
+}
+}
+
+
+.bord{
+	
+	
 }
