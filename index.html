@@ -167,15 +167,15 @@
 			<div class="carousel" data-indicators="true" stye="position:relative">
 			
 				<div class="carousel-item" href="#twoIframe">
-					<iframe width="100%" height="350"  src="https://www.youtube.com/embed/OCsNK51agYw?ecver=1" frameborder="0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/OCsNK51agYw" frameborder="0" allowfullscreen></iframe>
 				</div>
 				
 				<div class="carousel-item" href="#twoIframe">
-					<iframe width="100%" height="350"  src="https://www.youtube.com/embed/OCsNK51agYw?ecver=1" frameborder="0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/OCsNK51agYw" frameborder="0" allowfullscreen></iframe>
 				</div>
 				
 				<div class="carousel-item" href="#twoIframe">
-					<iframe width="100%" height="350"  src="https://www.youtube.com/embed/OCsNK51agYw?ecver=1" frameborder="0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/OCsNK51agYw" frameborder="0" allowfullscreen></iframe>
 				</div>
 
 				
@@ -880,12 +880,93 @@
 
 
 			$(document).ready(function(){
+				
+				$("iframe").width("100%");
+				$("iframe").height("350");
+				
+				var iframeArray = new Array;
+				$("iframe").each(function(){
+					iframeArray.push($("iframe").attr("src"));
+				});
+				
+				if(iframeArray.length >=5){
+					$('.carousel').width("80%");
+				}
+				else if($(window).width() < 500){
+					$('.carousel').width("90%");
+					console.log("pasok");
+				}
+				else{
+					$('.carousel').width((iframeArray.length*20)+"%");
+					console.log("dito");
+				}	
+				
+				var ctrIframe =0;
+				var ctrCarousel =0;
 				$("#btnArrowRight").click(function(){
 					$('.carousel').carousel('next');
+					
+					
+					if(ctrIframe >= $("iframe").length){
+						ctrIframe=0;
+					}
+					
+					if($(".carousel-item").eq(ctrIframe).css("z-index")== 0){
+						ctrCarousel+=1;
+						if(ctrCarousel >=$("iframe").length ){
+							ctrCarousel=0;
+						}
+						var autoplay = iframeArray[ctrCarousel];
+						autoplay+= "?autoplay=1";
+						$("iframe").eq(ctrCarousel).attr("src", autoplay);
+						
+					
+						console.log(ctrCarousel);
+						
+						var autoplay = iframeArray[ctrIframe];
+						autoplay+= "?autoplay=0";
+						$("iframe").eq(ctrIframe).attr("src", autoplay);
+						console.log("pause\t"+$("iframe").eq(ctrIframe).attr("src"));
+					}
+					console.log("iframe \t"+ctrIframe);
+					ctrIframe+=1;
+					
+					
+					
 				});
 				
 				$("#btnArrowLeft").click(function(){
 					$('.carousel').carousel('prev');
+					
+					if(ctrIframe <  0){
+						ctrIframe= $("iframe").length-1;
+						ctrCarousel = $("iframe").length-1;
+					}
+
+					if($(".carousel-item").eq(ctrIframe).css("z-index")== 0){
+						ctrCarousel-=1;
+						if(ctrCarousel <0 ){
+							ctrCarousel=$("iframe").length-1;
+						}
+						var autoplay = iframeArray[ctrCarousel];
+						autoplay+= "?autoplay=1";
+						$("iframe").eq(ctrCarousel).attr("src", autoplay);
+
+						console.log(ctrCarousel);
+						
+						var autoplay = iframeArray[ctrIframe];
+						console.log("index\t"+ iframeArray[ctrIframe]);
+						autoplay+= "?autoplay=0";
+						$("iframe").eq(ctrIframe).attr("src", autoplay);
+						console.log("pause\t"+$("iframe").eq(ctrIframe).attr("src"));
+					}
+				
+					ctrIframe-=1;
+					
+					
+					console.log("iframe \t"+ctrIframe);
+					
+					
 				});
 				
 				
@@ -895,7 +976,7 @@
 					$("#white").toggleClass("whiteNew");
 
 				});
-
+				
 				$('.carousel').carousel();
 				$('.scrollspy').scrollSpy();
 
@@ -934,7 +1015,7 @@
 
 			});	
 
-
+//////////////////////////////////////////////////////////////////////////////////			CANVAS
 			function loadingImage(){
 				var image = new Array(3);
 				var imgCtr=0;
@@ -948,7 +1029,7 @@
 					image[c1].onload = function(){
 						imgCtr++;
 						if(imgCtr == image.length){
-							console.log("pumasok dito");
+						
 							moveColorSection(image);
 						}
 					};
@@ -1007,71 +1088,116 @@
 					}
 
 				}
-
+				var boolean = 1;
 				var click = canvas.addEventListener('click', function wew(evt) {
 					var mousePos = getMousePos(canvas, evt);
 					var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
 					var pos = mousePos.x;
+					
+					if(boolean == 1){
+						
+						for(c1 =0; c1<arrayImage.length; c1++){
 
-					for(c1 =0; c1<arrayImage.length; c1++){
 
-						if(c1 == (arrayImage.length-1)){
-							if(pos > imgDx[c1] && pos < imgDx[0]){
-								var x = arrayImage[c1].width / arrayImage.length;
-								var y = canvas.width / arrayImage.length;
-								var max = arrayImage[c1].width;
-								var maxCanvas = canvas.width;
-								var img = arrayImage[c1];
-								clearInterval(intervalMove);
-								var interval = setInterval(function(){
+							if(c1 == (arrayImage.length-1)){
+								if(pos > imgDx[c1] ){
+									var x = arrayImage[c1].width / arrayImage.length;
+									var y = canvas.width / arrayImage.length;
+									var max = arrayImage[c1].width;
+									var maxCanvas = canvas.width;
+									var img = arrayImage[c1];
+									clearInterval(intervalMove);
+									var interval = setInterval(function(){
 
-									if(canvas.width < 500){
-										ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, maxCanvas, canvas.height);
-										clearInterval(interval);
-										console.log("black");
-									}else{
-										if(x < max ){
-											x+=100;
-										}
-										else{
+										if(canvas.width < 500){
+											ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, maxCanvas, canvas.height);
 											clearInterval(interval);
+											console.log("black");
+										}else{
+											if(x < max ){
+												x+=100;
+											}
+											else{
+												clearInterval(interval);
+											}
+											ctx.drawImage(img, 0, 0, x, img.height, 0, 0, x, canvas.height);
 										}
-										ctx.drawImage(img, 0, 0, x, img.height, 0, 0, x, canvas.height);
-									}
 
 
-								},10);
+									},10);
+								}
 							}
-						}
-						else{
+							else{
 
-							if(pos > imgDx[c1] && pos < imgDx[c1+1]){
-								var x = arrayImage[c1].width / arrayImage.length;
-								var max = arrayImage[c1].width;
-								var img = arrayImage[c1];
-								clearInterval(intervalMove);
-								var interval = setInterval(function(){
-
-									if(canvas.width < 500){
-										ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, maxCanvas, canvas.height);
-										clearInterval(interval);
-										console.log("black");
-									}else{
-										if(x < max ){
-											x+=100;
-										}
-										else{
+								if(pos > imgDx[c1] && pos < imgDx[c1+1]){
+									var x = arrayImage[c1].width / arrayImage.length;
+									var max = arrayImage[c1].width;
+									var img = arrayImage[c1];
+									clearInterval(intervalMove);
+									var interval = setInterval(function(){
+										if(canvas.width < 500){
+											ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, maxCanvas, canvas.height);
 											clearInterval(interval);
+											console.log("bronw");
+										}else{
+											if(x < max ){
+												x+=100;
+											}
+											else{
+												clearInterval(interval);
+											}
+											ctx.drawImage(img, 0, 0, x, img.height, 0, 0, x, canvas.height);
 										}
-										ctx.drawImage(img, 0, 0, x, img.height, 0, 0, x, canvas.height);
-									}
-								},10);
+									},10);
 
+
+								}
+							}
+
+						}
+						boolean =0;
+					}// end of true
+					
+					else{
+						
+						canvas.width = $(window).width();
+						var imageTotalWidth = arrayImage[0].width / arrayImage.length;
+						var imageTotalSpace = imageTotalWidth;
+
+						var imageWidth = 0
+						var imageSpace = imageTotalWidth;
+
+						var canvasTotalWidth =  canvas.width / arrayImage.length;
+						var CanvasTotalSpace = canvasTotalWidth;
+
+						var canvasWidth = 0;
+						var canvasSpace = canvasTotalWidth;
+
+						
+
+						for(c1 =0; c1<arrayImage.length; c1++){
+
+							if(c1 ==0){
+
+								imgSx[c1] = imageWidth;
+								imgDx[c1] = canvasWidth;
+								ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);
+								imgSx[c1] = imageWidth;
+								imgDx[c1] = canvasWidth;
 
 							}
+							else{
+
+								imageWidth+=imageTotalWidth;
+								canvasWidth+=canvasTotalWidth;
+								imgSx[c1] = imageWidth;
+								imgDx[c1] = canvasWidth;
+								ctx.drawImage(arrayImage[c1], imgSx[c1], 0, imageSpace, arrayImage[c1].height, imgDx[c1], 0, canvasSpace, canvas.height);	
+
+							}
+
 						}
-
-
+						boolean =1;
 					}
 
 
@@ -1081,8 +1207,9 @@
 					var mousePos = getMousePos(canvas, evt);
 					var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
 					var pos = mousePos.x;
+					
 					clearInterval(intervalMove);
-					moveCamera(pos, arrayImage, imgSx, imgDx, canvas, imageSpace, canvasSpace, ctx);
+//					moveCamera(pos, arrayImage, imgSx, imgDx, canvas, imageSpace, canvasSpace, ctx);
 
 				},false);
 
@@ -1090,7 +1217,7 @@
 					clearInterval(intervalMove);
 				},false);
 
-			}
+			}// END OF FUNCTION MOVECOLOR
 
 			var intervalMove;
 			function moveCamera(pos, arrayImage, imgSx, imgDx, canvas, imageSpace, canvasSpace, ctx){
@@ -1153,10 +1280,8 @@
 					y: evt.clientY - rect.top
 				};
 			}
-			//
-			//
-			///		IMAGE COMPARISON
 
+//////////////////////////////////////////////////////////////////////////////////			CANVAS
 
 			// Call & init
 			$(document).ready(function(){

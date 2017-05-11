@@ -990,6 +990,9 @@ input[type=search]:focus:-ms-input-placeholder {
 	z-index: -999;
 }
 
+canvas{
+	cursor: pointer;
+}
 /**
 * --------------------------------------------------------------------------
 *CAROUSEL
@@ -999,7 +1002,7 @@ input[type=search]:focus:-ms-input-placeholder {
 .carousel {
 	overflow: hidden;
 	position: relative;
-	width: 80%;
+/*	width: 60%;*/
 	height: 400px;
 	-webkit-perspective: 500px;
 	perspective: 500px;
@@ -2259,7 +2262,7 @@ display: none;
 	position:absolute;
 	margin-left:100px;
 	left:0;
-	top:21.5%;
+	top:22%;
 	
 }
 
@@ -2267,7 +2270,7 @@ display: none;
 	position:absolute;
 	margin-right:100px;
 	right:0;
-	top:21.5%;
+	top:22%;
 }
 
 @media (max-width: 500px) {
@@ -2275,7 +2278,7 @@ display: none;
 		position:absolute;
 		margin-left:5px;
 		left:0;
-		top:14%;
+		top:15.5%;
 		z-index: 1;
 	}
 
@@ -2283,7 +2286,7 @@ display: none;
 		position:absolute;
 		margin-right:5px;
 		right:0;
-		top:14%;
+		top:15.5%;
 		z-index: 1;
 	}
 }
