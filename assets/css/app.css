@@ -1026,9 +1026,6 @@ canvas{
 	height:350px;
 }
 
-.tabs .tab a.active {
-	background-image:url(../../images/seigaiha.png);
-}
 
 /**
 * --------------------------------------------------------------------------
@@ -1810,7 +1807,7 @@ canvas{
 
 .header-tag {
 
-	text-shadow: 3px 3px 0 #ccc;
+/*	text-shadow: 3px 3px 0 #ccc;*/
 	text-align: right;
 	position: absolute;
 	bottom:0;
@@ -1895,14 +1892,14 @@ h3{
 	top: 37%;
 	left: 15%;
 	height: 60px;
-	width: 64px;
+	width: 53px;
 	z-index: 1;
 }
 
 
 
 .menu-container{
-	height: 324px;	;
+	height: 300px;	;
 	box-shadow: 1px 1px 10px #464646;
 }
 

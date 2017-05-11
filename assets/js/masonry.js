@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var imageH = new Array(18);
 	var ctr=0;
 	for(c1 = 0 ; c1<images.length; c1++){
-		images[c1]="images/designPic"+(c1+1)+".jpg";
+		images[c1]="assets/img/designPic"+(c1+1)+".jpg";
 		
 		imageH[c1] = new Image();
 		
@@ -17,7 +17,7 @@ $(document).ready(function(){
 			}
 		}
 		
-		imageH[c1].src = "images/designPic"+(c1+1)+".jpg";
+		imageH[c1].src = "assets/img/designPic"+(c1+1)+".jpg";
 	}
 
 });

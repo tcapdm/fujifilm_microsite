@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?blzje6');
+  src:  url('fonts/icomoon.eot?blzje6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?blzje6') format('truetype'),
+    url('fonts/icomoon.woff?blzje6') format('woff'),
+    url('fonts/icomoon.svg?blzje6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-view-finder:before {
+  content: "\e900";
+}
+.icon-controls:before {
+  content: "\e901";
+}
+.icon-auto-mode:before {
+  content: "\e902";
+}
+.icon-auto-flash:before {
+  content: "\e903";
+}
+.icon-autofocus:before {
+  content: "\e904";
+}
+.icon-burst-mode:before {
+  content: "\e905";
+}
+.icon-camera_macro:before {
+  content: "\e906";
+}
+.icon-camera-autofocus-1:before {
+  content: "\e907";
+}
+.icon-camera-autofocus-2:before {
+  content: "\e908";
+}
+.icon-camera-brightness:before {
+  content: "\e909";
+}
+.icon-camera-lens-1:before {
+  content: "\e90a";
+}
+.icon-camera-lens-2:before {
+  content: "\e90b";
+}
+.icon-camera-lens-3:before {
+  content: "\e90c";
+}
+.icon-camera-lens-4:before {
+  content: "\e90d";
+}
+.icon-camera-settings:before {
+  content: "\e90e";
+}
+.icon-camera-shutter:before {
+  content: "\e90f";
+}
+.icon-camera-temp:before {
+  content: "\e910";
+}
+.icon-camera-tripod:before {
+  content: "\e911";
+}
+.icon-camera-tripod-2:before {
+  content: "\e912";
+}
+.icon-camera-waterproof:before {
+  content: "\e913";
+}
+.icon-canera-tripod-3:before {
+  content: "\e914";
+}
+.icon-contrast:before {
+  content: "\e915";
+}
+.icon-crop:before {
+  content: "\e916";
+}
+.icon-dslr-flash:before {
+  content: "\e917";
+}
+.icon-exposure:before {
+  content: "\e918";
+}
+.icon-film:before {
+  content: "\e919";
+}
+.icon-image:before {
+  content: "\e91a";
+}
+.icon-image-polaroid-many:before {
+  content: "\e91b";
+}
+.icon-image-polaroid-single:before {
+  content: "\e91c";
+}
+.icon-iso:before {
+  content: "\e91d";
+}
+.icon-memory-card:before {
+  content: "\e91e";
+}
+.icon-memory-card-32:before {
+  content: "\e91f";
+}
+.icon-no-flash:before {
+  content: "\e920";
+}
+.icon-preview:before {
+  content: "\e921";
+}
+.icon-video-camera-1:before {
+  content: "\e922";
+}
+.icon-video-camera-2:before {
+  content: "\e923";
+}
+.icon-video-camera-play:before {
+  content: "\e924";
+}
+
