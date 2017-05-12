@@ -327,10 +327,12 @@ function drags(dragElement, resizeElement, container) {
 
 $(document).ready(function(){
 
+	if ($('a[data-rel^=lightcase]').length) {
 
-	$('a[data-rel^=lightcase]').lightcase({
+		$('a[data-rel^=lightcase]').lightcase({
 
-	});
+		});
+	}
 
 	// Fuji -digital
 	$('ul.tabs').tabs();                          
@@ -377,9 +379,11 @@ $(document).ready(function(){
 	$("#videos iframe").height("350");
 
 	var iframeArray = new Array;
-	$("#videos iframe").each(function(){
-		iframeArray.push($("iframe").attr("src"));
-	});
+	if ($("#videos iframe").length) {
+		$("#videos iframe").each(function(){
+			iframeArray.push($("iframe").attr("src"));
+		});
+	}
 
 	if(iframeArray.length >=5){
 		$('#videos .carousel').width("80%");
