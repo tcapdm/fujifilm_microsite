@@ -3,16 +3,16 @@ function loadingImage(){
 	var imgCtr=0;
 	for(c1 = 0; c1< image.length; c1++){
 		image[c1] = new Image();
-		image[c1].src = "../img/color/cam"+(c1+1)+".jpg";
-		console.log(image[c1]);
+		image[c1].src = "assets/img/color/cam"+(c1+1)+".jpg";
+		//console.log(image[c1]);
 	}
 
-	for(c1 = 0; c1< image.length; c1++){
+	for(c1 = 0; c1< image.length; c1++){		
 		image[c1].onload = function(){
 			imgCtr++;
 			if(imgCtr == image.length){
 
-				moveColorSection(image);
+				moveColorSection(image);				
 			}
 		};
 	}
