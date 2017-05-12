@@ -1889,11 +1889,16 @@ h3{
 }
 .fixedContent{
 	position: fixed;
-	top: 37%;
-	left: 15%;
+	top: 119px;
+	left: 228px;
 	height: 60px;
 	width: 53px;
 	z-index: 1;
+}
+
+.scrollspy .scrllspy-padding-fix {
+padding-top: 0;
+padding-bottom: 0;
 }
 
 

@@ -474,7 +474,10 @@ $(document).ready(function(){
 	});
 
 	$('#videos .carousel').carousel();
-	$('ul.srllspy .scrollspy').scrollSpy();
+	var headerTopHeight = $('.header .header-top').outerHeight();
+	$('ul.srllspy .scrollspy').scrollSpy({
+		scrollOffset: headerTopHeight
+	});
 
 	var top = $("#sectionFrontBackView").offset().top;
 	var top2 = $("#videos").offset().top;
