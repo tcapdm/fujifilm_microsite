@@ -191,7 +191,7 @@ function moveColorSection(arrayImage){
 		var pos = mousePos.x;
 
 		clearInterval(intervalMove);
-		//moveCamera(pos, arrayImage, imgSx, imgDx, canvas, imageSpace, canvasSpace, ctx);
+		moveCamera(pos, arrayImage, imgSx, imgDx, canvas, imageSpace, canvasSpace, ctx);
 
 	},false);
 

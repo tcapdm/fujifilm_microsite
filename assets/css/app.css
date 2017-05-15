@@ -1830,6 +1830,65 @@ canvas{
 
 }
 
+@media screen and (max-width:1580px){
+	.header-sub{
+
+		font-size:80px;
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-family: roboto condensed;
+
+	}
+}
+
+@media screen and (max-width:1295px){
+	.header-sub{
+
+		font-size:70px;
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-family: roboto condensed;
+
+	}
+}
+
+@media screen and (max-width:1147px){
+	.header-sub{
+
+		font-size:60px;
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-family: roboto condensed;
+
+	}
+}
+
+@media screen and (max-width:1000px){
+	.header-sub{
+
+		font-size:50px;
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-family: roboto condensed;
+
+	}
+}
+@media only screen and (max-width:850px){
+	.header-sub{
+
+		font-size:40px;
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-family: roboto condensed;
+
+	}
+}
+
 h3{
 
 	font-family: roboto;
